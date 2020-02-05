@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-tree = ET.parse('/home/eric/Documents/example.xml')
+tree = ET.parse('/home/eric/IITB/Xcos-Converter/xcos_converter/example.xml')
 root = tree.getroot()
 for rank in root.iter('rank'):
     new_rank=int(rank.text) + 2

@@ -1,20 +1,11 @@
 import xml.etree.ElementTree as ET
 
-xmlTree = ET.parse('/home/eric/Documents/example.xml')
-xmlRootTag = {elem.tag for elem in xmlTree.iter()}
+tree = ET.parse('/home/eric/IITB/Xcos-Converter/xcos_converter/example.xml')
+root = tree.getroot()
 
+for child in root:
+    child.tag ='hey'
 
-#xmlTree = ET.parse('/home/fossee/Documents/example.xml')
-#xmlRootTag  = list({elem.tag for elem in xmlTree.iter()})
+    print(child.tag,child.attrib)
 
-#for xmlChild in xmlRootTag:
-    #if xmlChild :
-       # print(xmlChild)
-
-for xmlChild in xmlRootTag:
-    if xmlChild == 'to':
-        xmlChild = 'food'
-        #print(xmlChild)
-    #else:
-        #print(xmlChild)
-xmlTree.write('/home/eric/Documents/new.xml')
+tree.write('/home/eric/Documents/new.xml')
