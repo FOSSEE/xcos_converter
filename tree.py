@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-tree = ET.parse('/home/eric/IITB/Xcos-Converter/xcos_converter/example.xml')
+tree = ET.parse('/home/eric/IITB/xcos_converter/example.xml')
 root = tree.getroot()
 for rank in root.iter('rank'):
     new_rank=int(rank.text) + 2
@@ -7,4 +7,4 @@ for rank in root.iter('rank'):
     rank.set('updated','yes')
 tree.find('.//year').text = '1/1/2011'
 
-tree.write('/home/eric/Documents/new.xml')
+tree.write('/home/eric/IITB/xcos_converter/new.xml')
