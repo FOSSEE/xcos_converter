@@ -19,14 +19,17 @@ iter = root.getiterator()
 
 
 for child in root:
-    if child.tag == 'USA':
-        child.tag ='Xml'
+    if child.tag == 'Xml':
+        child.tag ='USA'
+
     for elem in iter:
         if elem.keys():
             for name,value in elem.items():
-                if value == 'Singapore':
-                    value = 'Test3'
-                print(value)
+                if value == 'Chile':
+                    elem.tag='SA'
+                elif value == 'Singapore':
+                    elem.tag='Asia'
+                #print(value)
 
 
 tree.write('/home/eric/IITB/xcos_converter/new.xml')
