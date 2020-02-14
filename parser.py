@@ -6,29 +6,27 @@ root = tree.getroot()
 iter = root.getiterator()
 ch=root.getchildren()
 
-l=[]
+ls =["Singapore","Panama"]
 
 for child in root:
+    
     #remove parent tag by searching attrib
-    for n,v in child.items():
-        l.append(v)
-        '''if v == 'Singapore':
-            root.remove(child)'''
-
-    if child.attrib == 'name':
-        root.remove(child)
-
+    '''for elem in iter:
+        for child in list(elem):
+            if child.tag in conf.ls:
+                elem.remove(child)
+                '''
     #change node based on name
     '''for a in conf.rules:
         if child.tag in conf.rules:
             child.tag = conf.rules[child.tag]'''
 
     #changing gchild nodes based on child attrib
-    '''for n,v in child.items():
+    for n,v in child.items():
         if v == 'Singapore':
             for r in child:
                 if r.tag=='rank':
-                    r.tag="test2"'''
+                    r.tag="test2"
             
 
     #changing  nodes based on attributes
@@ -37,5 +35,13 @@ for child in root:
             for name,value in elem.items():
                 if value in conf.r1:
                     elem.tag=conf.r1[value]'''
+    
+    
+'''for child in ch:
+    for n,v in child.items():
+        if child.attrib[n] in ls:
+            print(child.tag)
+            root.remove(child)'''
+     
 
 tree.write('new.xml')
