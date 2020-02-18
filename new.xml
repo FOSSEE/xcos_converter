@@ -1,42 +1,22 @@
-<data>
-    <xml name="abc">
-        <rank>1</rank>
-        <year>2008</year>
-        <gdppc>141100</gdppc>
-        <neighbor direction="E" name="Austria" />
-        <neighbor direction="W" name="Switzerland" />
-    </xml>
-    <As name="Singapore">
-        <test2>4</test2>
-        <year>2011</year>
-        <gdppc>59900</gdppc>
-        <neighbor direction="N" name="Malaysia" />
-    </As>
-    <country1 name="Panama">
-        <rank>68</rank>
-        <year>2011</year>
-        <gdppc>13600</gdppc>
-        <neighbor direction="W" name="Costa Rica" />
-        <neighbor direction="E" name="Colombia" />
-    </country1>
-    <Test name="Liechtenstein">
-        <rank>1</rank>
-        <year>2008</year>
-        <gdppc>141100</gdppc>
-        <neighbor direction="E" name="Austria" />
-        <neighbor direction="W" name="Switzerland" />
-    </Test>
-    <Asia name="Singapore">
-        <test2>4</test2>
-        <year>2011</year>
-        <gdppc>59900</gdppc>
-        <neighbor direction="N" name="Malaysia" />
-    </Asia>
-    <country name="Panama">
-        <rank>68</rank>
-        <year>2011</year>
-        <gdppc>13600</gdppc>
-        <neighbor direction="W" name="Costa Rica" />
-        <neighbor direction="E" name="Colombia" />
-    </country>
-</data>
+<xcosDiagram>
+    <BasicBlock blockType="d" id="-50eacccf:15ebdcd7dc9:-76e7" interfaceFunctionName="CONST_m" ordering="1" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
+        <ScilabString as="exprs" height="1" width="1">
+          <data column="0" line="0" test1="working" value="working" />
+        </ScilabString>
+        <ScilabDouble as="realParameters" height="0" width="0" />
+        <ScilabDouble as="integerParameters" height="0" width="0" />
+        <Array as="objectsParameters" scilabClass="ScilabList">
+          <ScilabDouble height="1" width="1">
+             <data column="0" line="0" realPart="314.1592653589793" />
+          </ScilabDouble>
+        </Array>
+        <ScilabDouble as="nbZerosCrossing" height="1" width="1">
+          <data column="0" line="0" realPart="0.0" test1="working" value="working" />
+        </ScilabDouble>
+        <ScilabDouble as="nmode" height="1" width="1">
+          <data column="0" line="0" realPart="0.0" test1="working" value="working" />
+        </ScilabDouble>
+        <Array as="oDState" scilabClass="ScilabList" />
+        <Array as="equations" scilabClass="ScilabList" />
+    </BasicBlock>
+</xcosDiagram>

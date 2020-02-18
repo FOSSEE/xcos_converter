@@ -1,4 +1,7 @@
 import xml.etree.ElementTree as ET
+#from xml.etree.ElementTree import Element
+from xml.etree.ElementTree import Element, SubElement
+from xml.etree.ElementTree import ElementTree
 import conf
 #/home/eric/IITB/xcos_converter/
 tree = ET.parse('example.xml')
@@ -6,28 +9,24 @@ root = tree.getroot()
 iter = root.getiterator()
 ch=root.getchildren()
 
-ls =["Singapore","Panama"]
+ls =['exprs',"nmode"]
 
 for child in root:
-    
-    #remove parent tag by searching attrib
-    '''for elem in iter:
-        for child in list(elem):
-            if child.tag in conf.ls:
-                elem.remove(child)
-                '''
+
     #change node based on name
-    '''for a in conf.rules:
-        if child.tag in conf.rules:
-            child.tag = conf.rules[child.tag]'''
+    '''for q in child:
+        if q.tag in conf.rules:
+            print(q.tag)
+            q.tag = conf.rules[q.tag]'''
 
     #changing gchild nodes based on child attrib
-    for n,v in child.items():
-        if v == 'Singapore':
-            for r in child:
-                if r.tag=='rank':
-                    r.tag="test2"
-            
+    for c in child:
+        for r in c:
+            for n,v in r.items():
+                if n in conf.at:
+                    for a in conf.a:
+                        for b in conf.b:
+                            r.set(a,b)
 
     #changing  nodes based on attributes
     '''for elem in iter:
@@ -36,12 +35,8 @@ for child in root:
                 if value in conf.r1:
                     elem.tag=conf.r1[value]'''
     
-    
-'''for child in ch:
-    for n,v in child.items():
-        if child.attrib[n] in ls:
-            print(child.tag)
-            root.remove(child)'''
-     
+
+
+        
 
 tree.write('new.xml')

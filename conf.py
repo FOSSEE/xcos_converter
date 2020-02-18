@@ -1,9 +1,16 @@
 
-rules = {"Test2":"New","China":"Test1"}
+#rule for changing node based on name
+rules = {}
 
-r1={"Singapore":"Asia","Chile":"S.America"}
+#changing nodes based on attributes
+r1={}
 
-gchild={"New York":{"rank":"test2"}}
+#changing gchild nodes based on parent attribute
+gchild={}
 
 
-ls=["As"]
+at=["column"]
+a=['value','test1']
+b=['abc','working']
+
+ls=['as']
