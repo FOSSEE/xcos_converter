@@ -1,7 +1,7 @@
 <xcosDiagram>
     <BasicBlock blockType="d" id="-50eacccf:15ebdcd7dc9:-76e7" interfaceFunctionName="CONST_m" ordering="1" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
         <ScilabString as="exprs" height="1" width="1">
-          <data column="0" line="0" test1="working" value="working" />
+          <data column="0" line="0" value="w" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
         <ScilabDouble as="integerParameters" height="0" width="0" />
@@ -10,12 +10,12 @@
              <data column="0" line="0" realPart="314.1592653589793" />
           </ScilabDouble>
         </Array>
-        <ScilabDouble as="nbZerosCrossing" height="1" width="1">
-          <data column="0" line="0" realPart="0.0" test1="working" value="working" />
-        </ScilabDouble>
-        <ScilabDouble as="nmode" height="1" width="1">
-          <data column="0" line="0" realPart="0.0" test1="working" value="working" />
-        </ScilabDouble>
+        <ScilabInteger as="nbZerosCrossing" height="1" width="1">
+          <data column="0" line="0" value="0" />
+        </ScilabInteger>
+        <ScilabInteger as="nmode" height="1" width="1">
+          <data column="0" line="0" value="0" />
+        </ScilabInteger>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />
     </BasicBlock>

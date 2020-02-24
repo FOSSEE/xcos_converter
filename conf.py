@@ -1,6 +1,7 @@
 
 #rule for changing node based on name
-rules = {}
+attr=['nmode','nbZerosCrossing']
+rules = {"ScilabDouble":"ScilabInteger"}
 
 #changing nodes based on attributes
 r1={}
@@ -8,9 +9,27 @@ r1={}
 #changing gchild nodes based on parent attribute
 gchild={}
 
+#setting new attrib
+at=[]
+a=[]
+b=[]
 
-at=["column"]
-a=['value','test1']
-b=['abc','working']
+#removing nodes
+ls=[]
 
-ls=['as']
+#to do
+tags  = []
+
+'''attrs = {'as':'exprs'}
+newvalue = 'newvalue'
+av = {attrs:newvalue}
+tags.append({'ScilabString':av})
+
+attrs = {'height':'1'}
+newvalue = '2'
+av = {attrs:newvalue}
+tags.append({'ScilabDouble':av})'''
+
+#changing existing attribute values
+lst = ['realPart']
+t = ['value']
