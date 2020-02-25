@@ -11,11 +11,11 @@
              <data line="0" column="0" realPart="314.1592653589793"/>
           </ScilabDouble>
         </Array>
-        <ScilabDouble as="nbZerosCrossing" height="1" width="1">
-          <data line="0" column="0" realPart="0.0"/>
+        <ScilabDouble as="nbZerosCrossing" height="6" width="2">
+          <data line="2" column="1" realPart="0.0"/>
         </ScilabDouble>
-        <ScilabDouble as="nmode" height="1" width="1">
-          <data line="0" column="0" realPart="0.0"/>
+        <ScilabDouble as="nmode" height="4" width="1">
+          <data line="9" column="0" realPart="0.0"/>
         </ScilabDouble>
         <Array as="oDState" scilabClass="ScilabList"/>
         <Array as="equations" scilabClass="ScilabList"/>

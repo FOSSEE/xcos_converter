@@ -38,10 +38,23 @@ for child in root:
                     for t in conf.t:
                         r.attrib[t] = r.attrib[n]
                         del r.attrib[n]
-                        print(r.attrib)
+                        #print(r.attrib)
 
-    # adding new element
-                            
+    # exchange attribute and sub attribute values
+    for a in child:
+        for n,v in a.items():
+            if 'height' == n and int(v) > 1:
+                q=v        
+                w = a.attrib['width']
+                q,w=w,q
+                a.attrib['height']= q
+                a.attrib['width'] = w
+                for b in a:
+                    x = b.attrib['line']
+                    y = b.attrib['column']
+                    x,y=y,x
+                    b.attrib['line'] = x
+                    b.attrib['column'] = y
     
 
 #remove nodes based on attributes

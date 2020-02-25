@@ -4,17 +4,17 @@
           <data column="0" line="0" value="w" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabDouble as="integerParameters" height="0" width="0" />
+        <ScilabInteger as="integerParameters" height="0" width="0" />
         <Array as="objectsParameters" scilabClass="ScilabList">
           <ScilabDouble height="1" width="1">
              <data column="0" line="0" realPart="314.1592653589793" />
           </ScilabDouble>
         </Array>
-        <ScilabInteger as="nbZerosCrossing" height="1" width="1">
-          <data column="0" line="0" value="0" />
+        <ScilabInteger as="nbZerosCrossing" height="2" width="6">
+          <data column="2" line="1" value="0" />
         </ScilabInteger>
-        <ScilabInteger as="nmode" height="1" width="1">
-          <data column="0" line="0" value="0" />
+        <ScilabInteger as="nmode" height="1" width="4">
+          <data column="9" line="0" value="0" />
         </ScilabInteger>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />

@@ -1,6 +1,6 @@
 
 #rule for changing node based on name
-attr=['nmode','nbZerosCrossing']
+attr=['nmode','nbZerosCrossing','integerParameters']
 rules = {"ScilabDouble":"ScilabInteger"}
 
 #changing nodes based on attributes
