@@ -38,12 +38,11 @@ for child in root:
                     for t in conf.t:
                         r.attrib[t] = r.attrib[n]
                         del r.attrib[n]
-                        #print(r.attrib)
 
     # exchange attribute and sub attribute values
     for a in child:
         for n,v in a.items():
-            if 'height' == n and int(v) > 1:
+            if 'height' == n and int(v) > 1 and a.tag == "ScilabInteger":
                 q=v        
                 w = a.attrib['width']
                 q,w=w,q
@@ -54,8 +53,21 @@ for child in root:
                     y = b.attrib['column']
                     x,y=y,x
                     b.attrib['line'] = x
-                    b.attrib['column'] = y
-    
+                    b.attrib['column'] = y    
+
+
+#explicit tag
+for child in root:  
+    if child.tag == 'ExplicitInputPort':
+        x = child.attrib
+        root.remove(child)
+        ET.SubElement(root, "ExplicitInputPort", attrib=x )
+          
+for child in root:
+    if child.tag == 'ExplicitOutputPort':
+        x = child.attrib
+        root.remove(child)
+        ET.SubElement(root, "ExplicitOutputPort", attrib=x )
 
 #remove nodes based on attributes
 for child in ch:

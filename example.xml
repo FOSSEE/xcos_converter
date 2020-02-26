@@ -20,6 +20,15 @@
         <Array as="oDState" scilabClass="ScilabList"/>
         <Array as="equations" scilabClass="ScilabList"/>
     </BasicBlock>
+    <ExplicitInputPort dataColumns = "1" dataLines ="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering ="1" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+      <mxGeometry/>
+    </ExplicitInputPort>
+     <ExplicitOutputPort dataColumns = "1" dataLines ="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering ="1" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+      <mxGeometry/>
+    </ExplicitOutputPort> 
+    <ExplicitInputPort dataColumns = "1" dataLines ="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering ="2" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+      <mxGeometry/>
+    </ExplicitInputPort>
 </xcosDiagram>
 
 

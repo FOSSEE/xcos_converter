@@ -17,6 +17,12 @@ b=[]
 #removing nodes
 ls=[]
 
+#changing existing attribute values
+lst = ['realPart']
+t = ['value']
+
+
+
 #to do
 tags  = []
 
@@ -30,6 +36,3 @@ newvalue = '2'
 av = {attrs:newvalue}
 tags.append({'ScilabDouble':av})'''
 
-#changing existing attribute values
-lst = ['realPart']
-t = ['value']
