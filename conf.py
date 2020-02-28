@@ -1,18 +1,48 @@
+path = [
+    {
+        'tag': 'ScilabDouble',
+        'attr': 'as',
+        'attrvalue': 'integerParameters'
+    },
+    {
+        'tag': 'ScilabDouble',
+        'attr': 'as',
+        'attrvalue': 'nmode'
+    },
+    {
+        'tag': 'ScilabDouble',
+        'attr': 'as',
+        'attrvalue': 'nbZerosCrossing'
+    }
+]
 
+exp = [
+        
+        {
+            'tag' : 'ExplicitOutPutPort'
+        },
+        {
+            'tag' : 'ExplicitInputPort'
+        }
+        
+]
+replacement = [
+
+        {
+            'tag': 'ScilabDouble',
+            'attr': 'as',
+            'attrvalue': 'integerParameters'
+        }
+
+]
 #rule for changing node based on name
 attr=['nmode','nbZerosCrossing','integerParameters']
 rules = {"ScilabDouble":"ScilabInteger"}
 
-#changing nodes based on attributes
-r1={}
-
-#changing gchild nodes based on parent attribute
-gchild={}
-
 #setting new attrib
-at=[]
-a=[]
-b=[]
+at=['nmode','nbZerosCrossing','integerParameters']
+a=["intPrecision"]
+b=["sci_int32"]
 
 #removing nodes
 ls=[]

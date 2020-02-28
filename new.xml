@@ -10,13 +10,20 @@
              <data column="0" line="0" realPart="314.1592653589793" />
           </ScilabDouble>
         </Array>
-        <ScilabInteger as="nbZerosCrossing" height="2" width="6">
-          <data column="2" line="1" value="0" />
+        <ScilabInteger as="nbZerosCrossing" height="6" width="2">
+          <data column="1" line="2" value="0" />
         </ScilabInteger>
-        <ScilabInteger as="nmode" height="1" width="4">
-          <data column="9" line="0" value="0" />
+        <ScilabInteger as="nmode" height="4" width="1">
+          <data column="0" line="9" value="0" />
         </ScilabInteger>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />
     </BasicBlock>
-    <ExplicitInputPort dataColumns="1" dataLines="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering="1" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="" /><ExplicitInputPort dataColumns="1" dataLines="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering="2" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="" /><ExplicitOutputPort dataColumns="1" dataLines="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering="1" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="" /></xcosDiagram>
+    <ExplicitInputPort dataColumns="1" dataLines="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering="1" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+      </ExplicitInputPort>
+     <ExplicitOutputPort dataColumns="1" dataLines="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering="1" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+      <mxGeometry />
+    </ExplicitOutputPort> 
+    <ExplicitInputPort dataColumns="1" dataLines="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75a1" ordering="2" parent="-50eacccf:15ebdcd7dc9:-75ab" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+      </ExplicitInputPort>
+</xcosDiagram>
