@@ -17,9 +17,9 @@ path.append(
         'attrvalue': 'nmode'
     })
 rule.append({
-    DOUBLE_TO_INTEGER:
-    {'tag':'ScilabInteger',
-    'attribute':{'intPrecision':'sci_int32'}}
+    'op':DOUBLE_TO_INTEGER,
+    'tag':'ScilabInteger',
+    'attribute':{'intPrecision':'sci_int32'}
 })
 
 path.append(
@@ -29,9 +29,11 @@ path.append(
         'attr':'realPart'
     })
 rule.append({
-    CHANGE_ATTRIB:
-    {'attr':'value'}
+    'op':CHANGE_ATTRIB,
+    'attr':'value'
 })
+
+
 
 path.append(    
     {
@@ -40,10 +42,9 @@ path.append(
         'attrvalue': 'nbZerosCrossing'
     })
 rule.append({
-    DOUBLE_TO_INTEGER:
-    {'tag':'ScilabInteger',
+    'op':DOUBLE_TO_INTEGER,
+    'tag':'ScilabInteger',
     'attribute':{'intPrecision':'sci_int32'}
-    }
 })
 
 path.append(
@@ -53,9 +54,10 @@ path.append(
         'attr':'realPart'
     })
 rule.append({
-    CHANGE_ATTRIB:
-    {'attr':'value'}
+    'op':CHANGE_ATTRIB,
+    'attr':'value'
 })
+
 
 
 path.append(
@@ -64,21 +66,21 @@ path.append(
         'attr':'ordering',
     })
 rule.append({
-    DELETE_ATTRIB:
-    {'attr':'ordering'}
+    'op':DELETE_ATTRIB,
+    'attr':'ordering'
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
     'attr':{'as':'state','height':'0','width':'0'}
-    }
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
     'attr':{'as':'dState','height':'0','width':'0'}
-    }
 })
+
+
 
 path.append(
     {
@@ -90,16 +92,16 @@ rule.append({
     'attr':'ordering'
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
     'attr':{'as':'state','height':'0','width':'0'}
-    }
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
-    'attr':{'as':'dState','height':'0','width':'0'}}
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'dState','height':'0','width':'0'}
 })
+
 
 
 path.append(
@@ -108,19 +110,20 @@ path.append(
         'attr':'ordering',
     })
 rule.append({
-    DELETE_ATTRIB:
-    {'attr':'ordering'}
+    'op':DELETE_ATTRIB,
+    'attr':'ordering',
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
-    'attr':{'as':'state','height':'0','width':'0'}}
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'state','height':'0','width':'0'}
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
-    'attr':{'as':'dState','height':'0','width':'0'}}
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'dState','height':'0','width':'0'}
 })
+
 
 
 path.append(
@@ -130,19 +133,21 @@ path.append(
     }
 )
 rule.append({
-    DELETE_ATTRIB:
-    {'attr':'ordering'}
+    'op':DELETE_ATTRIB,
+    'attr':'ordering',
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
-    'attr':{'as':'state','height':'0','width':'0'}}
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'state','height':'0','width':'0'}
 })
 rule.append({
-    MAIN_BLOCK:
-    {'tag':'ScilabDouble',
-    'attr':{'as':'dState','height':'0','width':'0'}}
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'dState','height':'0','width':'0'}
 })
+
+
 
 path.append(
     {
@@ -152,18 +157,18 @@ path.append(
     }
 )
 rule.append({
-    DELETE_ATTRIB:
-    {'attr':'y'}
+    'op':DELETE_ATTRIB,
+    'attr':'y',
 })
 rule.append({
-    ADD_SUB_SUBTAG:
-    {'subsubtag':'mxGeometry',
-    'attr':{'as':'sourcePoint','x':'0.0','y':'0.0'}}
+    'op':ADD_SUB_SUBTAG,
+    'subsubtag':'mxGeometry',
+    'attr':{'as':'sourcePoint','x':'0.0','y':'0.0'}
 })
 rule.append({
-    ADD_SUB_SUBTAG:
-    {'subsubtag':'mxGeometry',
-    'attr':{'as':'targetPoint','x':'0.0','y':'0.0'}}
+    'op':ADD_SUB_SUBTAG,
+    'subsubtag':'mxGeometry',
+    'attr':{'as':'targetPoint','x':'0.0','y':'0.0'}
 })
 
 path.append(
@@ -175,9 +180,11 @@ path.append(
     }
 )
 rule.append({
-    DELETE_ATTRIB:
-    {'attr':'scilabClass'}
+    'op':DELETE_ATTRIB,
+    'attr':'scilabClass',
 })
+
+
 
 path.append(
     {
@@ -185,8 +192,8 @@ path.append(
         'subtag':'mxGeometry' ,
     })
 rule.append({
-    DELETE_SUBTAG:
-    {'subtag':'mxGeometry'}
+    'op':DELETE_SUBTAG,
+    'subtag':'mxGeometry',
 })
 
 path.append(
@@ -195,9 +202,11 @@ path.append(
         'subtag':'mxGeometry' ,
     })
 rule.append({
-    DELETE_SUBTAG:
-    {'subtag':'mxGeometry'}
+    'op':DELETE_SUBTAG,
+    'subtag':'mxGeometry',
 })
+
+
 
 path.append(
     {
@@ -206,9 +215,9 @@ path.append(
         'attrvalue': 'integerParameters'
     })
 rule.append({
-    DOUBLE_TO_INTEGER_AND_SWAP:
-    {'tag':'ScilabInteger',  
-    'attribute':{'intPrecision':'sci_int32'}}
+    'op':DOUBLE_TO_INTEGER_AND_SWAP,
+    'tag':'ScilabInteger',  
+    'attribute':{'intPrecision':'sci_int32'}
 })
 
 path.append(
@@ -218,6 +227,9 @@ path.append(
         'attr':'realPart'
     })
 rule.append({
-    CHANGE_ATTRIB:
-    {'attr':'value'}
+    'op':CHANGE_ATTRIB,
+    'attr':'value'
 })
+
+
+print(rule)

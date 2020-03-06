@@ -20,13 +20,13 @@
         <Array as="equations" scilabClass="ScilabList" />
         <mxGeometry as="geometry" height="40.0" width="40.0" x="30.0" y="20.0" />
     </BasicBlock>
-    <ExplicitInputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e2" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="+">
+    <ExplicitInputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e2" ordering="1" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="+">
       <mxGeometry as="geometry" height="8.0" width="8.0" x="-8.0" y="16.0" />
     </ExplicitInputPort>
-    <ExplicitInputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e1" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="-">
+    <ExplicitInputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e1" ordering="2" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="-">
       <mxGeometry as="geometry" height="8.0" width="8.0" x="-8.0" y="36.0" />
     </ExplicitInputPort>
-    <ExplicitOutputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e0" ordering="1" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitOutputPort;align=right;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+    <ExplicitOutputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e0" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitOutputPort;align=right;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
       <mxGeometry as="geometry" height="8.0" width="8.0" x="40.0" y="26.0" />
     </ExplicitOutputPort>
     <ExplicitLink id="-50eacccf:15ebdcd7dc9:-75df" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-75e6" target="-50eacccf:15ebdcd7dc9:-75e2">

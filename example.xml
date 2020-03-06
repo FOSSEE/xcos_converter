@@ -41,43 +41,43 @@
     </ExplicitLink>
     <AfficheBlock dependsOnU="1" id="-4b9f829c:15ec1dacbf8:-7e84" interfaceFunctionName="AFFICH_m" ordering="80" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="affich2" simulationFunctionType="C_OR_FORTRAN" style="AFFICH_m;fontFamily=Dialog;fontSize=13;fontColor=#ff0000ff;flip=false;mirror=false" value="   20.0&#10;">
       <ScilabString as="exprs" height="7" width="1">
-        <data line="0" column="0" value="[1,1]"/>
-        <data line="1" column="0" value="1"/>
-        <data line="2" column="0" value="1"/>
-        <data line="3" column="0" value="1"/>
-        <data line="4" column="0" value="5"/>
-        <data line="5" column="0" value="1"/>
-        <data line="6" column="0" value="0"/>
+        <data column="0" line="0" value="[1,1]" />
+        <data column="0" line="1" value="1" />
+        <data column="0" line="2" value="1" />
+        <data column="0" line="3" value="1" />
+        <data column="0" line="4" value="5" />
+        <data column="0" line="5" value="1" />
+        <data column="0" line="6" value="0" />
       </ScilabString>
-      <ScilabDouble as="realParameters" height="0" width="0"/>
+      <ScilabDouble as="realParameters" height="0" width="0" />
       <ScilabDouble as="integerParameters" height="7" width="1">
-        <data line="0" column="0" realPart="1.0"/>
-        <data line="1" column="0" realPart="1.0"/>
-        <data line="2" column="0" realPart="1.0"/>
-        <data line="3" column="0" realPart="1000.0"/>
-        <data line="4" column="0" realPart="5.0"/>
-        <data line="5" column="0" realPart="1.0"/>
-        <data line="6" column="0" realPart="1.0"/>
+        <data column="0" line="0" realPart="1.0" />
+        <data column="0" line="1" realPart="1.0" />
+        <data column="0" line="2" realPart="1.0" />
+        <data column="0" line="3" realPart="1000.0" />
+        <data column="0" line="4" realPart="5.0" />
+        <data column="0" line="5" realPart="1.0" />
+        <data column="0" line="6" realPart="1.0" />
       </ScilabDouble>
-      <Array as="objectsParameters" scilabClass="ScilabList"/>
-      <ScilabDouble as="nbZerosCrossing" height="1" width="1">
-        <data line="0" column="0" realPart="0.0"/>
-      </ScilabDouble>
-      <ScilabDouble as="nmode" height="1" width="1">
-        <data line="0" column="0" realPart="0.0"/>
-      </ScilabDouble>
+      <Array as="objectsParameters" scilabClass="ScilabList" />
+      <ScilabInteger as="nbZerosCrossing" height="1" width="1">
+        <data column="0" line="0" realPart="0.0" />
+      </ScilabInteger>
+      <ScilabInteger as="nmode" height="1" width="1">
+        <data column="0" line="0" realPart="0.0" />
+      </ScilabInteger>
       <ScilabDouble as="dState" height="7" width="1">
-        <data line="0" column="0" realPart="-1.0"/>
-        <data line="1" column="0" realPart="0.0"/>
-        <data line="2" column="0" realPart="0.0"/>
-        <data line="3" column="0" realPart="1.0"/>
-        <data line="4" column="0" realPart="1.0"/>
-        <data line="5" column="0" realPart="0.0"/>
-        <data line="6" column="0" realPart="0.0"/>
+        <data column="0" line="0" realPart="-1.0" />
+        <data column="0" line="1" realPart="0.0" />
+        <data column="0" line="2" realPart="0.0" />
+        <data column="0" line="3" realPart="1.0" />
+        <data column="0" line="4" realPart="1.0" />
+        <data column="0" line="5" realPart="0.0" />
+        <data column="0" line="6" realPart="0.0" />
       </ScilabDouble>
-      <Array as="oDState" scilabClass="ScilabList"/>
-      <Array as="equations" scilabClass="ScilabList"/>
-      <mxGeometry as="geometry" height="40.0" width="60.0" x="490.0" y="1330.0"/>
+      <Array as="oDState" scilabClass="ScilabList" />
+      <Array as="equations" scilabClass="ScilabList" />
+      <mxGeometry as="geometry" height="40.0" width="60.0" x="490.0" y="1330.0" />
     </AfficheBlock>
 </xcosDiagram>
 

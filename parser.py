@@ -23,14 +23,12 @@ for i, path in enumerate(conf.path):
     nodes = root.findall(xpath)
     rl = conf.rule[i]
     for node in nodes:
-        for n,v in rl.items():
-            if n == 1 :
-                node.tag = v['tag']
-                print(v['attribute'])
+        if rl['op'] == conf.DOUBLE_TO_INTEGER :
+            node.tag = rl['tag']
 
-            if n == 3:
-                print(v['attr'])
-                del node.attrib[v['attr']]
+        if rl['op'] == conf.DELETE_ATTRIB:
+            del node.attrib[rl['attr']]
+
 tree.write('new.xml')
 
 # Author - Eric Paul
