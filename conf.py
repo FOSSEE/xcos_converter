@@ -5,7 +5,8 @@ MAIN_BLOCK = 4
 ADD_SUB_SUBTAG = 5
 DELETE_SUBTAG = 6
 DOUBLE_TO_INTEGER_AND_SWAP = 7
-
+DELETE_SUB_ATTRIB = 8
+DELETE_SUBSUB_ATTRIB = 9
 path = []
 rule = []
 
@@ -14,22 +15,14 @@ path.append(
     {
         'tag': 'ScilabDouble',
         'attr': 'as',
-        'attrvalue': 'nmode'
+        'attrvalue': 'nmode',
+        'subtag':'data',
+        'attr1':'realPart'
     })
 rule.append({
     'op':DOUBLE_TO_INTEGER,
     'tag':'ScilabInteger',
-    'attribute':{'intPrecision':'sci_int32'}
-})
-
-path.append(
-    {
-        'tag': 'ScilabDouble',
-        'subtag':'data',
-        'attr':'realPart'
-    })
-rule.append({
-    'op':CHANGE_ATTRIB,
+    'attribute':{'intPrecision':'sci_int32'},
     'attr':'value'
 })
 
@@ -39,24 +32,17 @@ path.append(
     {
         'tag': 'ScilabDouble',
         'attr': 'as',
-        'attrvalue': 'nbZerosCrossing'
+        'attrvalue': 'nbZerosCrossing',
+        'subtag':'data',
+        'attr1':'realPart'
     })
 rule.append({
     'op':DOUBLE_TO_INTEGER,
     'tag':'ScilabInteger',
-    'attribute':{'intPrecision':'sci_int32'}
-})
-
-path.append(
-    {
-        'tag': 'ScilabDouble',
-        'subtag':'data',
-        'attr':'realPart'
-    })
-rule.append({
-    'op':CHANGE_ATTRIB,
+    'attribute':{'intPrecision':'sci_int32'},
     'attr':'value'
 })
+
 
 
 
@@ -69,11 +55,21 @@ rule.append({
     'op':DELETE_ATTRIB,
     'attr':'ordering'
 })
+path.append(
+    {
+        'tag':'BasicBlock',
+        'attr':'ordering',
+    })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
     'attr':{'as':'state','height':'0','width':'0'}
 })
+path.append(
+    {
+        'tag':'BasicBlock',
+        'attr':'ordering',
+    })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
@@ -91,11 +87,21 @@ rule.append({
     'op':DELETE_ATTRIB,
     'attr':'ordering'
 })
+path.append(
+    {
+        'tag':'Product',
+        'attr':'ordering',
+    })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
     'attr':{'as':'state','height':'0','width':'0'}
 })
+path.append(
+    {
+        'tag':'Product',
+        'attr':'ordering',
+    })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
@@ -113,11 +119,21 @@ rule.append({
     'op':DELETE_ATTRIB,
     'attr':'ordering',
 })
+path.append(
+    {
+        'tag':'BigSom',
+        'attr':'ordering',
+    })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
     'attr':{'as':'state','height':'0','width':'0'}
 })
+path.append(
+    {
+        'tag':'BigSom',
+        'attr':'ordering',
+    })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
@@ -136,11 +152,23 @@ rule.append({
     'op':DELETE_ATTRIB,
     'attr':'ordering',
 })
+path.append(
+    {
+        'tag':'AfficheBlock',
+        'attr':'ordering',
+    }
+)
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
     'attr':{'as':'state','height':'0','width':'0'}
 })
+path.append(
+    {
+        'tag':'AfficheBlock',
+        'attr':'ordering',
+    }
+)
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
@@ -158,13 +186,28 @@ path.append(
 )
 rule.append({
     'op':DELETE_ATTRIB,
-    'attr':'y',
+    'attr':
+    'y',
 })
+path.append(
+    {
+        'tag':'ExplicitLink',
+        'subtag':'mxGeometry',
+        'attr':'y',
+    }
+)
 rule.append({
     'op':ADD_SUB_SUBTAG,
     'subsubtag':'mxGeometry',
     'attr':{'as':'sourcePoint','x':'0.0','y':'0.0'}
 })
+path.append(
+    {
+        'tag':'ExplicitLink',
+        'subtag':'mxGeometry',
+        'attr':'y',
+    }
+)
 rule.append({
     'op':ADD_SUB_SUBTAG,
     'subsubtag':'mxGeometry',
@@ -207,29 +250,17 @@ rule.append({
 })
 
 
-
 path.append(
     {
         'tag': 'ScilabDouble',
         'attr': 'as',
-        'attrvalue': 'integerParameters'
+        'attrvalue': 'integerParameters',
+        'subtag':'data',
+        'attr1':'realPart'
     })
 rule.append({
     'op':DOUBLE_TO_INTEGER_AND_SWAP,
     'tag':'ScilabInteger',  
-    'attribute':{'intPrecision':'sci_int32'}
-})
-
-path.append(
-    {
-        'tag': 'ScilabDouble',
-        'subtag':'data',
-        'attr':'realPart'
-    })
-rule.append({
-    'op':CHANGE_ATTRIB,
+    'attribute':{'intPrecision':'sci_int32'},
     'attr':'value'
 })
-
-
-print(rule)

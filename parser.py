@@ -18,17 +18,62 @@ for i, path in enumerate(conf.path):
         if 'attrvalue' in path:
             xpath += '=\'' + path['attrvalue'] + '\''
         xpath += ']'    
-    
+
     #print(xpath)
     nodes = root.findall(xpath)
     rl = conf.rule[i]
+    #print(i, xpath, rl , nodes)
     for node in nodes:
-        if rl['op'] == conf.DOUBLE_TO_INTEGER :
+        
+        #print(node.tag)
+        if rl['op'] == conf.CHANGE_ATTRIB:
+            pass 
+
+        elif rl['op'] == conf.DOUBLE_TO_INTEGER :
             node.tag = rl['tag']
+            for n ,v in rl['attribute'].items():
+                node.set(n,v)
+            if 'attr1' in path:
+                x = './/'+ path['subtag']
+                n = node.find(x)
+                n.attrib[rl['attr']] =  str(int(float(n.attrib[path['attr1']])))
+                del n.attrib[path['attr1']]
 
-        if rl['op'] == conf.DELETE_ATTRIB:
-            del node.attrib[rl['attr']]
+                
+        elif rl['op'] == conf.DELETE_ATTRIB:
+            if rl['attr'] in node.attrib:
+                del node.attrib[rl['attr']]
 
-tree.write('new.xml')
+
+        elif rl['op'] == conf.MAIN_BLOCK:
+            pass
+
+
+        elif rl['op'] == conf.ADD_SUB_SUBTAG:
+            pass
+
+
+        elif rl['op'] == conf.DELETE_SUBTAG:
+            pass
+
+
+        elif rl['op'] == conf.DOUBLE_TO_INTEGER_AND_SWAP:
+            pass
+
+
+        elif rl['op'] == conf.DELETE_SUB_ATTRIB:
+            pass
+
+
+        elif rl['op'] == conf.DELETE_SUBSUB_ATTRIB:
+            pass
+
+        
+            
+                
+#print(conf.rule)
+comment = Comment('Xcos - 2.0 - scilab-6.0.2 - 20190911')
+root.insert(0,comment)
+tree.write('new.xml', encoding='UTF-8', xml_declaration = True)
 
 # Author - Eric Paul

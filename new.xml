@@ -1,5 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <xcosDiagram>
-    <BasicBlock blockType="d" id="-50eacccf:15ebdcd7dc9:-76e7" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
+    <!--Xcos - 2.0 - scilab-6.0.2 - 20190911--><BasicBlock blockType="d" id="-50eacccf:15ebdcd7dc9:-76e7" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
         <ScilabString as="exprs" height="1" width="1">
           <data column="0" line="0" value="w" />
         </ScilabString>
@@ -10,11 +11,11 @@
             <data column="0" line="0" realPart="314.1592653589793" />
           </ScilabDouble>
         </Array>
-        <ScilabInteger as="nbZerosCrossing" height="1" width="1">
-          <data column="0" line="0" realPart="0.0" />
+        <ScilabInteger as="nbZerosCrossing" height="1" intPrecision="sci_int32" width="1">
+          <data column="0" line="0" value="0" />
         </ScilabInteger>
-        <ScilabInteger as="nmode" height="1" width="1">
-          <data column="0" line="0" realPart="0.0" />
+        <ScilabInteger as="nmode" height="1" intPrecision="sci_int32" width="1">
+          <data column="0" line="0" value="0" />
         </ScilabInteger>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />
@@ -26,7 +27,7 @@
     <ExplicitInputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e1" ordering="2" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitInputPort;align=left;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="-">
       <mxGeometry as="geometry" height="8.0" width="8.0" x="-8.0" y="36.0" />
     </ExplicitInputPort>
-    <ExplicitOutputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e0" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitOutputPort;align=right;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
+    <ExplicitOutputPort dataColumns="1" dataType="REAL_MATRIX" id="-50eacccf:15ebdcd7dc9:-75e0" ordering="1" parent="-50eacccf:15ebdcd7dc9:-75e3" style="ExplicitOutputPort;align=right;verticalAlign=middle;spacing=10.0;rotation=0;flip=false;mirror=false" value="">
       <mxGeometry as="geometry" height="8.0" width="8.0" x="40.0" y="26.0" />
     </ExplicitOutputPort>
     <ExplicitLink id="-50eacccf:15ebdcd7dc9:-75df" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-75e6" target="-50eacccf:15ebdcd7dc9:-75e2">
@@ -38,7 +39,7 @@
         </Array>
       </mxGeometry>
     </ExplicitLink>
-    <AfficheBlock dependsOnU="1" id="-4b9f829c:15ec1dacbf8:-7e84" interfaceFunctionName="AFFICH_m" ordering="80" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="affich2" simulationFunctionType="C_OR_FORTRAN" style="AFFICH_m;fontFamily=Dialog;fontSize=13;fontColor=#ff0000ff;flip=false;mirror=false" value="   20.0&#10;">
+    <AfficheBlock dependsOnU="1" id="-4b9f829c:15ec1dacbf8:-7e84" interfaceFunctionName="AFFICH_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="affich2" simulationFunctionType="C_OR_FORTRAN" style="AFFICH_m;fontFamily=Dialog;fontSize=13;fontColor=#ff0000ff;flip=false;mirror=false" value="   20.0&#10;">
       <ScilabString as="exprs" height="7" width="1">
         <data column="0" line="0" value="[1,1]" />
         <data column="0" line="1" value="1" />
