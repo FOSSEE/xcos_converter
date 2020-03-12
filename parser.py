@@ -25,22 +25,22 @@ for i, path in enumerate(conf.path):
     #print(i, xpath, rl , nodes)
     for node in nodes:
         
-        #print(node.tag)
-        if rl['op'] == conf.CHANGE_ATTRIB:
-            pass 
+        #print(node.tag) 
 
-        elif rl['op'] == conf.DOUBLE_TO_INTEGER :
+        if rl['op'] == conf.DOUBLE_TO_INTEGER :
             node.tag = rl['tag']
             for n ,v in rl['attribute'].items():
                 node.set(n,v)
-            if 'attr1' in path:
-                x = './/'+ path['subtag']
-                n = node.find(x)
-                n.attrib[rl['attr']] =  str(int(float(n.attrib[path['attr1']])))
-                del n.attrib[path['attr1']]
-
+            if 'subattr' in path:
+                x = './/'+ path['subtag'] + '[@' + path['subattr'] +']'
+                m = node.findall(x)
+                for n in m:
+                    n.attrib[rl['attr']] =  str(int(float(n.attrib[path['subattr']])))
+                    del n.attrib[path['subattr']]
+ 
                 
-        elif rl['op'] == conf.DELETE_ATTRIB:
+                
+        ecdlif rl['op'] == conf.DELETE_ATTRIB:
             if rl['attr'] in node.attrib:
                 del node.attrib[rl['attr']]
 
@@ -54,19 +54,37 @@ for i, path in enumerate(conf.path):
 
 
         elif rl['op'] == conf.DELETE_SUBTAG:
-            pass
+            if 'subtag' in path:
+                x = './/'+ path['subtag']
+                n = node.find(x)
+                node.remove(n)
+            if len(node.getchildren()) == 0:
+                node.text=None
 
 
         elif rl['op'] == conf.DOUBLE_TO_INTEGER_AND_SWAP:
-            pass
-
+            if int(node.attrib['height']) > 1:
+                node.tag = rl['tag']            #change tag
+                node.attrib['height'],node.attrib['width'] = node.attrib['width'],node.attrib['height']     #exchange height & width
+                x = './/'+ path['subtag'] + '[@' + path['subattr'] +']'         #xpath for data
+                m = node.findall(x)
+                for n in m:
+                    n.attrib[rl['attr']] =  str(int(float(n.attrib[path['subattr']])))          #change to value
+                    del n.attrib[path['subattr']]
+                    n.attrib['column'],n.attrib['line'] = n.attrib['line'],n.attrib['column']   #exchange line & column
 
         elif rl['op'] == conf.DELETE_SUB_ATTRIB:
-            pass
+            if 'subtag' in path:
+                x = './/'+ path['subtag']
+                n = node.find(x)
+                del n.attrib[rl['attr']]
 
 
         elif rl['op'] == conf.DELETE_SUBSUB_ATTRIB:
-            pass
+            x ='.//' + path['subsubtag']
+            n = node.find(x)
+            del n.attrib[rl['attr']]
+            
 
         
             

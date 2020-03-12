@@ -1,12 +1,12 @@
 DOUBLE_TO_INTEGER = 1
-CHANGE_ATTRIB = 2
-DELETE_ATTRIB = 3
-MAIN_BLOCK = 4
-ADD_SUB_SUBTAG = 5
-DELETE_SUBTAG = 6
-DOUBLE_TO_INTEGER_AND_SWAP = 7
-DELETE_SUB_ATTRIB = 8
-DELETE_SUBSUB_ATTRIB = 9
+DELETE_ATTRIB = 2
+MAIN_BLOCK = 3
+ADD_SUB_SUBTAG = 4
+DELETE_SUBTAG = 5
+DOUBLE_TO_INTEGER_AND_SWAP = 6
+DELETE_SUB_ATTRIB = 7
+DELETE_SUBSUB_ATTRIB = 8
+
 path = []
 rule = []
 
@@ -17,7 +17,7 @@ path.append(
         'attr': 'as',
         'attrvalue': 'nmode',
         'subtag':'data',
-        'attr1':'realPart'
+        'subattr':'realPart'
     })
 rule.append({
     'op':DOUBLE_TO_INTEGER,
@@ -34,7 +34,7 @@ path.append(
         'attr': 'as',
         'attrvalue': 'nbZerosCrossing',
         'subtag':'data',
-        'attr1':'realPart'
+        'subattr':'realPart'
     })
 rule.append({
     'op':DOUBLE_TO_INTEGER,
@@ -181,36 +181,34 @@ path.append(
     {
         'tag':'ExplicitLink',
         'subtag':'mxGeometry',
-        'attr':'y',
     }
 )
 rule.append({
-    'op':DELETE_ATTRIB,
-    'attr':
-    'y',
+    'op':DELETE_SUB_ATTRIB,
+    'attr':'y',
 })
 path.append(
     {
         'tag':'ExplicitLink',
         'subtag':'mxGeometry',
-        'attr':'y',
+ 
     }
 )
 rule.append({
     'op':ADD_SUB_SUBTAG,
-    'subsubtag':'mxGeometry',
+    'subsubtag':'mxPoint',
     'attr':{'as':'sourcePoint','x':'0.0','y':'0.0'}
 })
 path.append(
     {
         'tag':'ExplicitLink',
         'subtag':'mxGeometry',
-        'attr':'y',
+
     }
 )
 rule.append({
     'op':ADD_SUB_SUBTAG,
-    'subsubtag':'mxGeometry',
+    'subsubtag':'mxPoint',
     'attr':{'as':'targetPoint','x':'0.0','y':'0.0'}
 })
 
@@ -219,11 +217,11 @@ path.append(
         'tag':'ExplicitLink',
         'subtag':'mxGeometry',
         'subsubtag':'Array',
-        'attr':'scilabClass',
+        
     }
 )
 rule.append({
-    'op':DELETE_ATTRIB,
+    'op':DELETE_SUBSUB_ATTRIB,
     'attr':'scilabClass',
 })
 
@@ -256,7 +254,7 @@ path.append(
         'attr': 'as',
         'attrvalue': 'integerParameters',
         'subtag':'data',
-        'attr1':'realPart'
+        'subattr':'realPart'
     })
 rule.append({
     'op':DOUBLE_TO_INTEGER_AND_SWAP,
