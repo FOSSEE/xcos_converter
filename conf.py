@@ -6,6 +6,7 @@ DELETE_SUBTAG = 5
 DOUBLE_TO_INTEGER_AND_SWAP = 6
 DELETE_SUB_ATTRIB = 7
 DELETE_SUBSUB_ATTRIB = 8
+ADD_ATTRIB = 9
 
 path = []
 rule = []
@@ -45,35 +46,42 @@ rule.append({
 
 
 
-
 path.append(
     {
         'tag':'BasicBlock',
-        'attr':'ordering',
+        
     })
 rule.append({
     'op':DELETE_ATTRIB,
     'attr':'ordering'
 })
+
 path.append(
     {
         'tag':'BasicBlock',
-        'attr':'ordering',
+        
     })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
-    'attr':{'as':'state','height':'0','width':'0'}
+    'attr':{'as':'state','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
 })
+
 path.append(
     {
         'tag':'BasicBlock',
-        'attr':'ordering',
+        
     })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
-    'attr':{'as':'dState','height':'0','width':'0'}
+    'attr':{'as':'dState','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
 })
 
 
@@ -81,98 +89,120 @@ rule.append({
 path.append(
     {
         'tag':'Product',
-        'attr':'ordering',
+        
     })
 rule.append({
     'op':DELETE_ATTRIB,
     'attr':'ordering'
 })
+
 path.append(
     {
         'tag':'Product',
-        'attr':'ordering',
+        
     })
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
-    'attr':{'as':'state','height':'0','width':'0'}
-})
-path.append(
-    {
-        'tag':'Product',
-        'attr':'ordering',
-    })
-rule.append({
-    'op':MAIN_BLOCK,
-    'tag':'ScilabDouble',
-    'attr':{'as':'dState','height':'0','width':'0'}
+    'attr':{'as':'state','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
 })
 
+path.append(
+    {
+        'tag':'Product',
+        
+    })
+rule.append({
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'dState','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
+})
 
 
 path.append(
     {
         'tag':'BigSom',
-        'attr':'ordering',
+        
     })
+rule.append({
+    'op':DELETE_ATTRIB,
+    'attr':'ordering',
+})
+
+path.append(
+    {
+        'tag':'BigSom',
+        
+    })
+rule.append({
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'state','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
+})
+
+path.append(
+    {
+        'tag':'BigSom',
+        
+    })
+rule.append({
+    'op':MAIN_BLOCK,
+    'tag':'ScilabDouble',
+    'attr':{'as':'dState','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
+})
+
+
+
+path.append(
+    {
+        'tag':'AfficheBlock',
+        
+    }
+)
 rule.append({
     'op':DELETE_ATTRIB,
     'attr':'ordering',
 })
 path.append(
     {
-        'tag':'BigSom',
-        'attr':'ordering',
-    })
-rule.append({
-    'op':MAIN_BLOCK,
-    'tag':'ScilabDouble',
-    'attr':{'as':'state','height':'0','width':'0'}
-})
-path.append(
-    {
-        'tag':'BigSom',
-        'attr':'ordering',
-    })
-rule.append({
-    'op':MAIN_BLOCK,
-    'tag':'ScilabDouble',
-    'attr':{'as':'dState','height':'0','width':'0'}
-})
-
-
-
-path.append(
-    {
         'tag':'AfficheBlock',
-        'attr':'ordering',
-    }
-)
-rule.append({
-    'op':DELETE_ATTRIB,
-    'attr':'ordering',
-})
-path.append(
-    {
-        'tag':'AfficheBlock',
-        'attr':'ordering',
+        
     }
 )
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
-    'attr':{'as':'state','height':'0','width':'0'}
+    'attr':{'as':'state','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
 })
+
 path.append(
     {
         'tag':'AfficheBlock',
-        'attr':'ordering',
+        
     }
 )
 rule.append({
     'op':MAIN_BLOCK,
     'tag':'ScilabDouble',
-    'attr':{'as':'dState','height':'0','width':'0'}
+    'attr':{'as':'dState','height':'0','width':'0'},
+    'attribute':{'dependsOnT' : '0'},
+    'attr1' : 'dependsOnU',
+    'value' : '0'
 })
 
 
@@ -187,6 +217,7 @@ rule.append({
     'op':DELETE_SUB_ATTRIB,
     'attr':'y',
 })
+
 path.append(
     {
         'tag':'ExplicitLink',
@@ -197,27 +228,17 @@ path.append(
 rule.append({
     'op':ADD_SUB_SUBTAG,
     'subsubtag':'mxPoint',
-    'attr':{'as':'sourcePoint','x':'0.0','y':'0.0'}
+    'attr':{'as':'sourcePoint','x':'0.0','y':'0.0'},
+    'subsubtag1':'mxPoint',
+    'attr1':{'as':'targetPoint','x':'0.0','y':'0.0'}
 })
-path.append(
-    {
-        'tag':'ExplicitLink',
-        'subtag':'mxGeometry',
 
-    }
-)
-rule.append({
-    'op':ADD_SUB_SUBTAG,
-    'subsubtag':'mxPoint',
-    'attr':{'as':'targetPoint','x':'0.0','y':'0.0'}
-})
 
 path.append(
     {
         'tag':'ExplicitLink',
         'subtag':'mxGeometry',
         'subsubtag':'Array',
-        
     }
 )
 rule.append({
@@ -239,12 +260,36 @@ rule.append({
 
 path.append(
     {
+        'tag':'ExplicitInputPort',
+        
+    })
+rule.append({
+    'op':ADD_ATTRIB,
+    'attribute':{'initialState':'-1.0'},
+    'attr' : 'dataLines',
+    'value' : "-1"
+})
+
+path.append(
+    {
         'tag':'ExplicitOutputPort',
         'subtag':'mxGeometry' ,
     })
 rule.append({
     'op':DELETE_SUBTAG,
     'subtag':'mxGeometry',
+})
+
+path.append(
+    {
+        'tag':'ExplicitOutputPort',
+        
+    })
+rule.append({
+    'op':ADD_ATTRIB,
+    'attribute':{'initialState':'-1.0'},
+    'attr' : 'dataLines',
+    'value' : "-1"
 })
 
 
@@ -262,3 +307,4 @@ rule.append({
     'attribute':{'intPrecision':'sci_int32'},
     'attr':'value'
 })
+

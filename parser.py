@@ -37,20 +37,31 @@ for i, path in enumerate(conf.path):
                 for n in m:
                     n.attrib[rl['attr']] =  str(int(float(n.attrib[path['subattr']])))
                     del n.attrib[path['subattr']]
- 
+       
                 
-                
-        ecdlif rl['op'] == conf.DELETE_ATTRIB:
+        elif rl['op'] == conf.DELETE_ATTRIB :
             if rl['attr'] in node.attrib:
                 del node.attrib[rl['attr']]
 
 
         elif rl['op'] == conf.MAIN_BLOCK:
-            pass
+            a = SubElement(node,rl['tag'],rl['attr'])
+            a.tail = '\n      '
+            if rl['attr1'] not in node.attrib:
+                node.set(rl['attr1'],rl['value'])
+            for n,v in rl['attribute'].items():
+                node.set(n,v)
 
-
-        elif rl['op'] == conf.ADD_SUB_SUBTAG:
-            pass
+        elif rl['op'] == conf.ADD_SUB_SUBTAG :
+            x = './/'+ path['subtag']
+            n = node.find(x)
+            xp = './/'+ path['subtag'] +'['+ rl['subsubtag']+']'
+            np= node.find(xp)
+            if np is None:
+                a = SubElement(n,rl['subsubtag'],rl['attr'])
+                b = SubElement(n,rl['subsubtag'],rl['attr'])
+                a.tail = "\n        "
+                b.tail = "\n        "       
 
 
         elif rl['op'] == conf.DELETE_SUBTAG:
@@ -63,7 +74,7 @@ for i, path in enumerate(conf.path):
 
 
         elif rl['op'] == conf.DOUBLE_TO_INTEGER_AND_SWAP:
-            if int(node.attrib['height']) > 1:
+            if int(node.attrib['height']) > 0:
                 node.tag = rl['tag']            #change tag
                 node.attrib['height'],node.attrib['width'] = node.attrib['width'],node.attrib['height']     #exchange height & width
                 x = './/'+ path['subtag'] + '[@' + path['subattr'] +']'         #xpath for data
@@ -74,9 +85,9 @@ for i, path in enumerate(conf.path):
                     n.attrib['column'],n.attrib['line'] = n.attrib['line'],n.attrib['column']   #exchange line & column
 
         elif rl['op'] == conf.DELETE_SUB_ATTRIB:
-            if 'subtag' in path:
-                x = './/'+ path['subtag']
-                n = node.find(x)
+            x = './/'+ path['subtag']
+            n = node.find(x)
+            if rl['attr'] in n.attrib:
                 del n.attrib[rl['attr']]
 
 
@@ -85,13 +96,18 @@ for i, path in enumerate(conf.path):
             n = node.find(x)
             del n.attrib[rl['attr']]
             
-
+        elif rl['op'] == conf.ADD_ATTRIB:
+            for k, v in rl['attribute'].items():
+                node.set(k,v)
+            if rl['attr'] not in node.attrib:
+                node.set(rl['attr'],rl['value'])
         
-            
-                
-#print(conf.rule)
-comment = Comment('Xcos - 2.0 - scilab-6.0.2 - 20190911')
+
+root.text= None
+root.text = "\n  "
+comment = Comment("Xcos - 2.0 - scilab-6.0.2 - 20190911")
+comment.tail = "\n      "  
 root.insert(0,comment)
-tree.write('new.xml', encoding='UTF-8', xml_declaration = True)
+tree.write('new.xml', encoding='UTF-8', xml_declaration=True)
 
 # Author - Eric Paul
