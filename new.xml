@@ -66,7 +66,7 @@
           <data column="0" line="0" value="[1;1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
         </ScilabInteger>
@@ -114,7 +114,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -221,7 +221,7 @@
           <data column="0" line="0" value="[1;1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
         </ScilabInteger>
@@ -249,7 +249,7 @@
             <mxPoint x="100.0" y="210.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-50eacccf:15ebdcd7dc9:-76a4" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-769d" target="-50eacccf:15ebdcd7dc9:-76a7">
@@ -260,7 +260,7 @@
             <mxPoint x="100.0" y="230.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-76a3" interfaceFunctionName="GOTO" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="goto" simulationFunctionType="DEFAULT" style="GOTO;flip=false;mirror=false">
@@ -269,7 +269,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -343,7 +343,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -493,7 +493,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -516,7 +516,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -635,7 +635,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -770,7 +770,7 @@
             <mxPoint x="100.0" y="500.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-50eacccf:15ebdcd7dc9:-75de" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-75e4" target="-50eacccf:15ebdcd7dc9:-75e1">
@@ -781,7 +781,7 @@
             <mxPoint x="100.0" y="520.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock blockType="d" dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-75db" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
@@ -813,7 +813,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -925,7 +925,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -1144,7 +1144,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -1200,7 +1200,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -1311,7 +1311,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -1338,7 +1338,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -1445,7 +1445,7 @@
             <mxPoint x="70.0" y="820.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-74ae" interfaceFunctionName="GAINBLK_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="gain" simulationFunctionType="DEFAULT" style="GAINBLK_f;flip=false;mirror=false">
@@ -1477,7 +1477,7 @@
             <mxPoint x="70.0" y="880.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BigSom dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-74aa" interfaceFunctionName="BIGSOM_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="sum" simulationFunctionType="TYPE_2" style="BIGSOM_f;flip=false;mirror=false" value="+">
@@ -1514,7 +1514,7 @@
             <mxPoint x="190.0" y="840.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-50eacccf:15ebdcd7dc9:-74a5" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-74ac" target="-50eacccf:15ebdcd7dc9:-74a8">
@@ -1525,7 +1525,7 @@
             <mxPoint x="190.0" y="860.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock blockType="d" dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-74a0" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
@@ -1557,7 +1557,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -1667,7 +1667,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -1774,7 +1774,7 @@
             <mxPoint x="70.0" y="990.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-7420" interfaceFunctionName="GAINBLK_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="gain" simulationFunctionType="DEFAULT" style="GAINBLK_f;flip=false;mirror=false">
@@ -1806,7 +1806,7 @@
             <mxPoint x="70.0" y="1050.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BigSom dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-741c" interfaceFunctionName="BIGSOM_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="sum" simulationFunctionType="TYPE_2" style="BIGSOM_f;flip=false;mirror=false" value="+">
@@ -1843,7 +1843,7 @@
             <mxPoint x="190.0" y="1010.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-50eacccf:15ebdcd7dc9:-7417" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-73fa" target="-50eacccf:15ebdcd7dc9:-741a">
@@ -1854,7 +1854,7 @@
             <mxPoint x="190.0" y="1030.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-7416" interfaceFunctionName="POWBLK_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="powblk" simulationFunctionType="DEFAULT" style="POWBLK_f;flip=false;mirror=false">
@@ -1862,7 +1862,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -1886,7 +1886,7 @@
             <mxPoint x="270.0" y="1020.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock blockType="d" dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-7412" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
@@ -1918,7 +1918,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -1943,7 +1943,7 @@
             <mxPoint x="270.0" y="1100.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BigSom dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-740c" interfaceFunctionName="BIGSOM_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="sum" simulationFunctionType="TYPE_2" style="BIGSOM_f;flip=false;mirror=false" value="+">
@@ -1979,7 +1979,7 @@
             <mxPoint x="360.0" y="1050.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-50eacccf:15ebdcd7dc9:-7407" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-740e" target="-50eacccf:15ebdcd7dc9:-740a">
@@ -1990,7 +1990,7 @@
             <mxPoint x="360.0" y="1070.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-7406" interfaceFunctionName="SQRT" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="mat_sqrt" simulationFunctionType="C_OR_FORTRAN" style="SQRT;flip=false;mirror=false">
@@ -2020,7 +2020,7 @@
             <mxPoint x="440.0" y="1060.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-7402" interfaceFunctionName="GOTO" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="goto" simulationFunctionType="DEFAULT" style="GOTO;flip=false;mirror=false">
@@ -2029,7 +2029,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -2056,7 +2056,7 @@
             <mxPoint x="510.0" y="1060.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-73d1" interfaceFunctionName="FROM" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="from" simulationFunctionType="DEFAULT" style="FROM;flip=false;mirror=false">
@@ -2136,7 +2136,7 @@
             <mxPoint x="70.0" y="1160.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-73c9" interfaceFunctionName="GAINBLK_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="gain" simulationFunctionType="DEFAULT" style="GAINBLK_f;flip=false;mirror=false">
@@ -2168,7 +2168,7 @@
             <mxPoint x="70.0" y="1220.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BigSom dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-73c5" interfaceFunctionName="BIGSOM_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="sum" simulationFunctionType="TYPE_2" style="BIGSOM_f;flip=false;mirror=false" value="+">
@@ -2205,7 +2205,7 @@
             <mxPoint x="190.0" y="1180.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-50eacccf:15ebdcd7dc9:-73c0" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-73a7" target="-50eacccf:15ebdcd7dc9:-73c3">
@@ -2216,7 +2216,7 @@
             <mxPoint x="190.0" y="1200.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock blockType="d" dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-73bf" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
@@ -2248,7 +2248,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -2276,7 +2276,7 @@
             <mxPoint x="270.0" y="1220.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-50eacccf:15ebdcd7dc9:-73b8" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-50eacccf:15ebdcd7dc9:-73be" target="-50eacccf:15ebdcd7dc9:-73bb">
@@ -2287,7 +2287,7 @@
             <mxPoint x="270.0" y="1240.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-73b7" interfaceFunctionName="TrigFun" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="atan_blk" simulationFunctionType="C_OR_FORTRAN" style="TrigFun;flip=false;mirror=false">
@@ -2317,7 +2317,7 @@
             <mxPoint x="340.0" y="1230.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-50eacccf:15ebdcd7dc9:-73b3" interfaceFunctionName="GAINBLK_f" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="gain" simulationFunctionType="DEFAULT" style="GAINBLK_f;flip=false;mirror=false">
@@ -2349,7 +2349,7 @@
             <mxPoint x="460.0" y="1230.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="0" id="-50eacccf:15ebdcd7dc9:-73af" interfaceFunctionName="GOTO" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="goto" simulationFunctionType="DEFAULT" style="GOTO;flip=false;mirror=false">
@@ -2358,7 +2358,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -2385,7 +2385,7 @@
             <mxPoint x="530.0" y="1230.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock blockType="d" dependsOnT="0" dependsOnU="0" id="-4b9f829c:15ec1dacbf8:-7ec6" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
@@ -2441,7 +2441,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -2545,7 +2545,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -2598,7 +2598,7 @@
           <data column="0" line="6" value="0" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="7">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="7">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
           <data column="2" line="0" value="1" />
@@ -3385,7 +3385,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -3459,7 +3459,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -3487,7 +3487,7 @@
             <mxPoint x="90.0" y="1480.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7e59" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7e54" target="-4b9f829c:15ec1dacbf8:-7e5c">
@@ -3498,7 +3498,7 @@
             <mxPoint x="90.0" y="1500.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7e58" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7e5b" target="-4b9f829c:15ec1dacbf8:-7e52">
@@ -3507,7 +3507,7 @@
             <mxPoint x="170.0" y="1490.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="0" id="-4b9f829c:15ec1dacbf8:-7e44" interfaceFunctionName="GOTO" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="goto" simulationFunctionType="DEFAULT" style="GOTO;flip=false;mirror=false">
@@ -3516,7 +3516,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -3590,7 +3590,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -3618,7 +3618,7 @@
             <mxPoint x="390.0" y="1480.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7e39" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7e34" target="-4b9f829c:15ec1dacbf8:-7e3c">
@@ -3629,7 +3629,7 @@
             <mxPoint x="390.0" y="1500.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7e38" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7e3b" target="-4b9f829c:15ec1dacbf8:-7e32">
@@ -3638,7 +3638,7 @@
             <mxPoint x="470.0" y="1490.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="0" id="-4b9f829c:15ec1dacbf8:-7e2d" interfaceFunctionName="FROM" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="from" simulationFunctionType="DEFAULT" style="FROM;flip=false;mirror=false">
@@ -3718,7 +3718,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -3741,7 +3741,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -3764,7 +3764,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -3864,7 +3864,7 @@
             <mxPoint x="170.0" y="1630.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock dependsOnT="0" dependsOnU="1" id="-4b9f829c:15ec1dacbf8:-7dcd" interfaceFunctionName="SQRT" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="mat_sqrt" simulationFunctionType="C_OR_FORTRAN" style="SQRT;flip=false;mirror=false">
@@ -3903,7 +3903,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -3987,7 +3987,7 @@
           <data column="0" line="0" value="[1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="-1" />
         </ScilabInteger>
@@ -4037,7 +4037,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -4096,7 +4096,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -4152,7 +4152,7 @@
           <data column="0" line="0" value="[1;1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
         </ScilabInteger>
@@ -4225,7 +4225,7 @@
           <data column="0" line="0" value="2" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="2" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList" />
@@ -4249,7 +4249,7 @@
             <mxPoint x="60.0" y="1850.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <BasicBlock blockType="d" dependsOnT="0" dependsOnU="0" id="-4b9f829c:15ec1dacbf8:-7d57" interfaceFunctionName="CONST_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="cstblk4_m" simulationFunctionType="C_OR_FORTRAN" style="CONST_m;flip=false;mirror=false">
@@ -4281,7 +4281,7 @@
           <data column="0" line="0" value="[1;1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="2">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="2">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
         </ScilabInteger>
@@ -4310,7 +4310,7 @@
             <mxPoint x="160.0" y="1870.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7d50" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7d56" target="-4b9f829c:15ec1dacbf8:-7d53">
@@ -4322,7 +4322,7 @@
             <mxPoint x="160.0" y="1890.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <AfficheBlock dependsOnT="0" dependsOnU="1" id="-4b9f829c:15ec1dacbf8:-7d42" interfaceFunctionName="AFFICH_m" parent="-50eacccf:15ebdcd7dc9:-76ee" simulationFunctionName="affich2" simulationFunctionType="C_OR_FORTRAN" style="AFFICH_m;fontFamily=Dialog;fontSize=13;fontColor=#ff0000ff;flip=false;mirror=false" value="  1632.5&#10;">
@@ -4336,7 +4336,7 @@
           <data column="0" line="6" value="0" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="6">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="6">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
           <data column="2" line="0" value="1" />
@@ -5137,7 +5137,7 @@
           <data column="0" line="6" value="0" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="6">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="6">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
           <data column="2" line="0" value="1" />
@@ -6073,7 +6073,7 @@
           <data column="0" line="0" value="[1;1;-1]" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="3">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="3">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
           <data column="2" line="0" value="-1" />
@@ -6139,7 +6139,7 @@
           <data column="0" line="6" value="0" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="6">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="6">
           <data column="0" line="0" value="1" />
           <data column="1" line="0" value="1" />
           <data column="2" line="0" value="1" />
@@ -6935,7 +6935,7 @@
           <data column="0" line="1" value="1" />
         </ScilabString>
         <ScilabDouble as="realParameters" height="0" width="0" />
-        <ScilabInteger as="integerParameters" height="1" width="1">
+        <ScilabInteger as="integerParameters" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="1" />
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList">
@@ -6968,14 +6968,14 @@
             <mxPoint x="440.0" y="1350.0" />
           </Array>
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7c7d" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7c80" target="-4b9f829c:15ec1dacbf8:-7e83">
         <mxGeometry as="geometry">
           <Array as="points" />
         <mxPoint as="sourcePoint" x="0.0" y="0.0" />
-        <mxPoint as="sourcePoint" x="0.0" y="0.0" />
+        <mxPoint as="targetPoint" x="0.0" y="0.0" />
         </mxGeometry>
       </ExplicitLink>
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7c83" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7c7f" target="-4b9f829c:15ec1dacbf8:-7c7b">

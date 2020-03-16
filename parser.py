@@ -39,7 +39,7 @@ for i, path in enumerate(conf.path):
                     del n.attrib[path['subattr']]
        
                 
-        elif rl['op'] == conf.DELETE_ATTRIB :
+        elif rl['op'] == conf.DELETE_ATTRIB :                       #deleting attrib ordering
             if rl['attr'] in node.attrib:
                 del node.attrib[rl['attr']]
 
@@ -47,24 +47,24 @@ for i, path in enumerate(conf.path):
         elif rl['op'] == conf.MAIN_BLOCK:
             a = SubElement(node,rl['tag'],rl['attr'])
             a.tail = '\n      '
-            if rl['attr1'] not in node.attrib:
+            if rl['attr1'] not in node.attrib:          #add attrib dependsOnU if not present
                 node.set(rl['attr1'],rl['value'])
-            for n,v in rl['attribute'].items():
+            for n,v in rl['attribute'].items():         #add attrib dependsOnT
                 node.set(n,v)
 
         elif rl['op'] == conf.ADD_SUB_SUBTAG :
             x = './/'+ path['subtag']
-            n = node.find(x)
+            n = node.find(x)                # finding mxgeometry
             xp = './/'+ path['subtag'] +'['+ rl['subsubtag']+']'
-            np= node.find(xp)
+            np= node.find(xp)               # finding mx point tag in mxgeometry
             if np is None:
                 a = SubElement(n,rl['subsubtag'],rl['attr'])
-                b = SubElement(n,rl['subsubtag'],rl['attr'])
                 a.tail = "\n        "
+                b = SubElement(n,rl['subsubtag1'],rl['attr1'])
                 b.tail = "\n        "       
 
 
-        elif rl['op'] == conf.DELETE_SUBTAG:
+        elif rl['op'] == conf.DELETE_SUBTAG:            #removing mxgeometry tag
             if 'subtag' in path:
                 x = './/'+ path['subtag']
                 n = node.find(x)
@@ -84,22 +84,26 @@ for i, path in enumerate(conf.path):
                     del n.attrib[path['subattr']]
                     n.attrib['column'],n.attrib['line'] = n.attrib['line'],n.attrib['column']   #exchange line & column
 
-        elif rl['op'] == conf.DELETE_SUB_ATTRIB:
+                for n ,v in rl['attribute'].items():
+                    node.set(n,v)
+
+
+        elif rl['op'] == conf.DELETE_SUB_ATTRIB:                #delete subattrib 'y' from mxGeometry
             x = './/'+ path['subtag']
             n = node.find(x)
             if rl['attr'] in n.attrib:
                 del n.attrib[rl['attr']]
 
 
-        elif rl['op'] == conf.DELETE_SUBSUB_ATTRIB:
+        elif rl['op'] == conf.DELETE_SUBSUB_ATTRIB:             #delete attrib scilabclass from array
             x ='.//' + path['subsubtag']
             n = node.find(x)
             del n.attrib[rl['attr']]
             
         elif rl['op'] == conf.ADD_ATTRIB:
-            for k, v in rl['attribute'].items():
+            for k, v in rl['attribute'].items():                #add attrib initialport
                 node.set(k,v)
-            if rl['attr'] not in node.attrib:
+            if rl['attr'] not in node.attrib:                   # if attrib 'datalines' is not present add
                 node.set(rl['attr'],rl['value'])
         
 
