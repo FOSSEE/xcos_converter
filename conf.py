@@ -7,6 +7,12 @@ DOUBLE_TO_INTEGER_AND_SWAP = 6
 DELETE_SUB_ATTRIB = 7
 DELETE_SUBSUB_ATTRIB = 8
 ADD_ATTRIB = 9
+DELETE_PORT_ATTRIB = 10
+ADD_LINK_ATTRIB = 11
+DELETE_TAG = 12
+REPLACE_ATTRIB = 13
+REPLACE_ATTRIB_COMMANDPORT = 14
+DELETE_ATTRIB_COMMANDCONTROL = 15
 KEY_RULE_OP = 'op'
 KEY_RULE_TAG = 'tag'
 KEY_RULE_ATTRIBUTE = 'attribute'
@@ -231,8 +237,9 @@ path.append(
     }
 )
 rule.append({
-    KEY_RULE_OP:DELETE_SUB_ATTRIB,
-    KEY_RULE_ATTR:'y',
+    KEY_RULE_OP : DELETE_SUB_ATTRIB,
+    KEY_RULE_ATTR : 'y',
+    KEY_RULE_ATTR1 : 'x',
 })
 
 path.append(
@@ -263,6 +270,17 @@ rule.append({
     KEY_RULE_ATTR:'scilabClass',
 })
 
+path.append(
+    {
+        KEY_PATH_TAG :'ExplicitLink',
+        
+    }
+)
+rule.append({
+    KEY_RULE_OP : ADD_LINK_ATTRIB,
+    KEY_RULE_ATTRIBUTE : {'style' : 'ExplicitLink' , 'value' : ''} ,
+})
+
 
 
 path.append(
@@ -289,6 +307,33 @@ rule.append({
 
 path.append(
     {
+        KEY_PATH_TAG :'ExplicitInputPort',
+        
+    })
+rule.append({
+    KEY_RULE_OP : DELETE_PORT_ATTRIB,
+    KEY_RULE_ATTR :'dataType',
+    KEY_RULE_VALUE : 'UNKNOW_TYPE',
+    KEY_RULE_ATTR1 : 'dataLines'
+})
+
+path.append(
+    {
+        KEY_PATH_TAG : 'ExplicitInputPort' ,
+        KEY_RULE_ATTR : 'visible'
+
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB ,
+        KEY_RULE_ATTR : 'value' ,
+        KEY_RULE_VALUE : ''
+    }
+)
+
+path.append(
+    {
         KEY_PATH_TAG :'ExplicitOutputPort',
         KEY_PATH_SUBTAG :'mxGeometry' ,
     })
@@ -309,6 +354,32 @@ rule.append({
     KEY_RULE_VALUE: "-1"
 })
 
+path.append(
+    {
+        KEY_PATH_TAG :'ExplicitOutputPort',
+        
+    })
+rule.append({
+    KEY_RULE_OP : DELETE_PORT_ATTRIB,
+    KEY_RULE_ATTR :'dataType',
+    KEY_RULE_VALUE : 'UNKNOW_TYPE',
+    KEY_RULE_ATTR1 : 'dataLines'
+})
+
+path.append(
+    {
+        KEY_PATH_TAG : 'ExplicitOutputPort' ,
+        KEY_PATH_ATTR : 'visible'
+
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB ,
+        KEY_RULE_ATTR : 'value' ,
+        KEY_RULE_VALUE : ''
+    }
+)
 
 path.append(
     {
@@ -325,3 +396,48 @@ rule.append({
     KEY_RULE_ATTR:'value'
 })
 
+path.append(
+    {
+        KEY_PATH_TAG : 'mxPoint',
+        KEY_PATH_ATTR : 'as',
+        KEY_PATH_ATTRVALUE : 'origin'
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : DELETE_TAG,
+        KEY_RULE_TAG : 'mxPoint'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'CommandPort',
+        KEY_PATH_ATTR : 'dataType',
+        KEY_PATH_ATTRVALUE : 'UNKNOW_TYPE'
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB_COMMANDPORT,
+        KEY_RULE_SUBTAG : 'mxGeometry',
+        KEY_RULE_ATTR : 'initialState',
+        KEY_RULE_VALUE : '-1.0'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'CommandControlLink',
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : DELETE_ATTRIB_COMMANDCONTROL,
+        KEY_RULE_SUBTAG : 'mxGeometry',
+        KEY_RULE_SUBSUBTAG : 'Array',
+        KEY_RULE_VALUE : 'scilabClass'
+    }
+)

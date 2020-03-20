@@ -14,16 +14,16 @@ for i, path in enumerate(conf.path):
     xpath = './/' + path[conf.KEY_PATH_TAG] 
     #if path.get('attr', None) is not None:
         #path.get('attrvalue', None) is not None
-    if 'attr' in path:
+    if conf.KEY_PATH_ATTR in path:
         xpath += '[@' + path[conf.KEY_PATH_ATTR]
-        if 'attrvalue' in path:
+        if conf.KEY_PATH_ATTRVALUE in path:
             xpath += '=\'' + path[conf.KEY_PATH_ATTRVALUE] + '\''
         xpath += ']'    
 
     #print(xpath)
     nodes = root.findall(xpath)
     rl = conf.rule[i]
-    #print(i, xpath, rl , nodes)
+    #print(i, rl , nodes)
     for node in nodes:
         
         #print(node.tag) 
@@ -45,13 +45,15 @@ for i, path in enumerate(conf.path):
                 del node.attrib[rl[conf.KEY_RULE_ATTR]]
 
 
+
         elif rl[conf.KEY_RULE_OP] == conf.MAIN_BLOCK:
-            a = SubElement(node,rl['tag'],rl['attr'])
+            a = SubElement(node,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
             a.tail = '\n      '
-            if rl['attr1'] not in node.attrib:          #add attrib dependsOnU if not present
-                node.set(rl['attr1'],rl['value'])
-            for n,v in rl['attribute'].items():         #add attrib dependsOnT
+            if rl[conf.KEY_RULE_ATTR1] not in node.attrib:          #add attrib dependsOnU if not present
+                node.set(rl[conf.KEY_RULE_ATTR1],rl[conf.KEY_RULE_VALUE])
+            for n,v in rl[conf.KEY_RULE_ATTRIBUTE].items():         #add attrib dependsOnT
                 node.set(n,v)
+
 
         elif rl[conf.KEY_RULE_OP] == conf.ADD_SUB_SUBTAG :
             x = './/'+ path[conf.KEY_PATH_SUBTAG]
@@ -90,24 +92,66 @@ for i, path in enumerate(conf.path):
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUB_ATTRIB:                #delete subattrib 'y' from mxGeometry
-            x = './/'+ path[conf.KEY_PATH_SUBTAG]
-            n = node.find(x)
-            if rl[conf.KEY_RULE_ATTR] in n.attrib:
+            a = './/'+ path[conf.KEY_PATH_SUBTAG]
+            n = node.find(a)
+            if rl[conf.KEY_RULE_ATTR] in n.attrib and rl[conf.KEY_RULE_ATTR1] in n.attrib:
                 del n.attrib[rl[conf.KEY_RULE_ATTR]]
+            #if rl[conf.KEY_RULE_ATTR1] in n.attrib:                         #delete subattrib x if value is 300
+                #if float(str(n.attrib[rl[conf.KEY_RULE_ATTR1]])) == float(rl[conf.KEY_RULE_VALUE]) :
+                del n.attrib[rl[conf.KEY_RULE_ATTR1]]
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUBSUB_ATTRIB:             #delete attrib scilabclass from array
             x ='.//' + path[conf.KEY_PATH_SUBSUBTAG]
             n = node.find(x)
             del n.attrib[rl[conf.KEY_RULE_ATTR]]
-            
+
+
         elif rl[conf.KEY_RULE_OP] == conf.ADD_ATTRIB:
             for k, v in rl[conf.KEY_RULE_ATTRIBUTE].items():                #add attrib initialport
                 node.set(k,v)
             if rl[conf.KEY_RULE_ATTR] not in node.attrib:                   # if attrib 'datalines' is not present add
                 node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
-        
+
+        elif rl[conf.KEY_RULE_OP] == conf.DELETE_PORT_ATTRIB:
+            if rl[conf.KEY_RULE_VALUE] == node.attrib[rl[conf.KEY_RULE_ATTR]]:            
+                del node.attrib[rl[conf.KEY_RULE_ATTR]]
+                del node.attrib[rl[conf.KEY_RULE_ATTR1]]
+
+
+        elif rl[conf.KEY_RULE_OP] == conf.ADD_LINK_ATTRIB:
+            for n ,v in rl[conf.KEY_RULE_ATTRIBUTE].items():
+                node.set(n,v)
+
+
+        elif rl[conf.KEY_RULE_OP] == conf.DELETE_TAG:
+            root.remove(node)
+
+
+        elif rl[conf.KEY_RULE_OP] == conf.REPLACE_ATTRIB :
+            del node.attrib[path[conf.KEY_PATH_ATTR]]
+            node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
+
+
+        elif rl[conf.KEY_RULE_OP] == conf.REPLACE_ATTRIB_COMMANDPORT:
+            del node.attrib[path[conf.KEY_PATH_ATTR]]
+            x = './/' + rl[conf.KEY_RULE_SUBTAG]
+            n = node.find(x)
+            node.remove(n)
+            if len(node.getchildren()) == 0:
+                node.text=None
+            node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
+
+
+        elif rl[conf.KEY_RULE_OP] == conf.DELETE_ATTRIB_COMMANDCONTROL:
+            x = './/' + rl[conf.KEY_PATH_SUBTAG] + '/' + rl[conf.KEY_PATH_SUBSUBTAG]        
+            n = node.find(x)
+            if rl[conf.KEY_RULE_VALUE] in n.attrib :
+                del n.attrib[rl[conf.KEY_RULE_VALUE]]
+
+
+
 for n,v in conf.root.items():
     root.set(n,v)
 root.text= None
