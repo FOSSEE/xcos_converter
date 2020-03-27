@@ -7,16 +7,15 @@ DOUBLE_TO_INTEGER_AND_SWAP = 6
 DELETE_SUB_ATTRIB = 7
 DELETE_SUBSUB_ATTRIB = 8
 ADD_ATTRIB = 9
-DELETE_PORT_ATTRIB = 10
-ADD_LINK_ATTRIB = 11
-DELETE_TAG = 12
-REPLACE_ATTRIB = 13
-REPLACE_ATTRIB_COMMANDPORT = 14
-DELETE_ATTRIB_COMMANDCONTROL = 15
+ADD_LINK_ATTRIB = 10
+DELETE_TAG = 11
+REPLACE_ATTRIB = 12
+BLOCK_TYPE_C = 13
 KEY_RULE_OP = 'op'
 KEY_RULE_TAG = 'tag'
 KEY_RULE_ATTRIBUTE = 'attribute'
 KEY_RULE_ATTR = 'attr'
+KEY_RULE_ATTRVALUE = 'attrvalue'
 KEY_RULE_VALUE = 'value'
 KEY_RULE_ATTR1 = 'attr1'
 KEY_RULE_SUBTAG = 'subtag'
@@ -24,6 +23,7 @@ KEY_RULE_SUBSUBTAG = 'subsubtag'
 KEY_RULE_SUBSUBTAG1 = 'subsubtag1'
 KEY_PATH_TAG = 'tag'
 KEY_PATH_ATTR = 'attr'
+KEY_PATH_VALUE = 'value'
 KEY_PATH_ATTRVALUE = 'attrvalue'
 KEY_PATH_SUBTAG = 'subtag'
 KEY_PATH_SUBATTR = 'subattr'
@@ -213,20 +213,6 @@ rule.append({
     KEY_RULE_VALUE : '0'
 })
 
-path.append(
-    {
-        KEY_PATH_TAG :'AfficheBlock',
-        
-    }
-)
-rule.append({
-    KEY_RULE_OP:MAIN_BLOCK,
-    KEY_RULE_TAG:'ScilabDouble',
-    KEY_RULE_ATTR:{'as':'dState','height':'0','width':'0'},
-    KEY_RULE_ATTRIBUTE:{'dependsOnT' : '0'},
-    KEY_RULE_ATTR1 : 'dependsOnU',
-    KEY_RULE_VALUE : '0'
-})
 
 
 
@@ -305,22 +291,38 @@ rule.append({
     KEY_RULE_VALUE : "-1"
 })
 
+
 path.append(
     {
         KEY_PATH_TAG :'ExplicitInputPort',
+        KEY_RULE_ATTR :'dataType',
+        KEY_RULE_ATTRVALUE : 'REAL_MATRIX',
         
     })
 rule.append({
-    KEY_RULE_OP : DELETE_PORT_ATTRIB,
-    KEY_RULE_ATTR :'dataType',
-    KEY_RULE_VALUE : 'UNKNOW_TYPE',
-    KEY_RULE_ATTR1 : 'dataLines'
+    KEY_RULE_OP:ADD_ATTRIB,
+    KEY_RULE_ATTR : 'dataColumns',
+    KEY_RULE_VALUE : "-2"
+})
+
+
+path.append(
+    {
+        KEY_PATH_TAG :'ExplicitInputPort',
+        KEY_RULE_ATTR :'dataType',
+        KEY_RULE_ATTRVALUE : 'UNKNOW_TYPE',
+        
+    })
+rule.append({
+    KEY_RULE_OP : REPLACE_ATTRIB,
+    KEY_RULE_ATTR : 'initialState',
+    KEY_RULE_VALUE : '-1.0'
 })
 
 path.append(
     {
         KEY_PATH_TAG : 'ExplicitInputPort' ,
-        KEY_RULE_ATTR : 'visible'
+        KEY_PATH_ATTR : 'visible'
 
     }
 )
@@ -354,16 +356,32 @@ rule.append({
     KEY_RULE_VALUE: "-1"
 })
 
+
 path.append(
     {
-        KEY_PATH_TAG :'ExplicitOutputPort',
+        KEY_PATH_TAG :'ExplicitOuputPort',
+        KEY_RULE_ATTR :'dataType',
+        KEY_RULE_ATTRVALUE : 'REAL_MATRIX',
         
     })
 rule.append({
-    KEY_RULE_OP : DELETE_PORT_ATTRIB,
-    KEY_RULE_ATTR :'dataType',
-    KEY_RULE_VALUE : 'UNKNOW_TYPE',
-    KEY_RULE_ATTR1 : 'dataLines'
+    KEY_RULE_OP:ADD_ATTRIB,
+    KEY_RULE_ATTR : 'dataColumns',
+    KEY_RULE_VALUE : "-2"
+})
+
+
+path.append(
+    {
+        KEY_PATH_TAG :'ExplicitOutputPort',
+        KEY_RULE_ATTR :'dataType',
+        KEY_RULE_ATTRVALUE : 'UNKNOW_TYPE'
+        
+    })
+rule.append({
+    KEY_RULE_OP : REPLACE_ATTRIB,
+    KEY_RULE_ATTR : 'initialState',
+    KEY_RULE_VALUE : '-1.0'
 })
 
 path.append(
@@ -415,13 +433,29 @@ path.append(
     {
         KEY_PATH_TAG : 'CommandPort',
         KEY_PATH_ATTR : 'dataType',
-        KEY_PATH_ATTRVALUE : 'UNKNOW_TYPE'
+        KEY_PATH_ATTRVALUE : 'UNKNOW_TYPE',
+        KEY_PATH_SUBTAG : 'mxGeometry',
     }
 )
 rule.append(
     {
-        KEY_RULE_OP : REPLACE_ATTRIB_COMMANDPORT,
-        KEY_RULE_SUBTAG : 'mxGeometry',
+        KEY_RULE_OP : DELETE_SUBTAG,
+        KEY_RULE_TAG : 'CommandPort'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'CommandPort',
+        KEY_PATH_ATTR : 'dataType',
+        KEY_PATH_ATTRVALUE : 'UNKNOW_TYPE',
+        KEY_PATH_SUBTAG : 'mxGeometry',
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB,
         KEY_RULE_ATTR : 'initialState',
         KEY_RULE_VALUE : '-1.0'
     }
@@ -431,13 +465,129 @@ rule.append(
 path.append(
     {
         KEY_PATH_TAG : 'CommandControlLink',
+        KEY_PATH_SUBTAG : 'mxGeometry',
+        KEY_PATH_SUBSUBTAG : 'Array',
     }
 )
 rule.append(
     {
-        KEY_RULE_OP : DELETE_ATTRIB_COMMANDCONTROL,
-        KEY_RULE_SUBTAG : 'mxGeometry',
-        KEY_RULE_SUBSUBTAG : 'Array',
-        KEY_RULE_VALUE : 'scilabClass'
+        KEY_RULE_OP : DELETE_SUBSUB_ATTRIB,
+        KEY_RULE_ATTR : 'scilabClass'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG :'CommandControlLink',
+        
+    }
+)
+rule.append({
+    KEY_RULE_OP : ADD_LINK_ATTRIB,
+    KEY_RULE_ATTRIBUTE : {'style' : 'CommandControlLink' , 'value' : ''} ,
+})
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'Product',
+        KEY_PATH_ATTR : 'value',
+        KEY_PATH_ATTRVALUE : '×',
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB,
+        KEY_RULE_ATTR : 'blocktype',
+        KEY_RULE_VALUE : 'c'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'BigSom',
+        KEY_PATH_ATTR : 'value',
+        KEY_PATH_ATTRVALUE : '+',
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB,
+        KEY_RULE_ATTR : 'blocktype',
+        KEY_RULE_VALUE : 'c'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'BasicBlock',
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : BLOCK_TYPE_C,
+        KEY_RULE_ATTR : 'blockType',
+        KEY_RULE_VALUE : 'c'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'AfficheBlock',
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : ADD_ATTRIB,
+        KEY_RULE_ATTRIBUTE : {'blockType' : 'c'}
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'CommandPort',
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : ADD_ATTRIB,
+        KEY_RULE_ATTRIBUTE : {'value' : ''}
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'ExplicitInputPort',
+        KEY_PATH_ATTR : 'value',
+        KEY_PATH_ATTRVALUE : '×'
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB,
+        KEY_RULE_ATTR : 'value',
+        KEY_RULE_VALUE : '&#xD7;'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'ExplicitInputPort',
+        KEY_PATH_ATTR : 'value',
+        KEY_PATH_ATTRVALUE : '÷'
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : REPLACE_ATTRIB,
+        KEY_RULE_ATTR : 'value',
+        KEY_RULE_VALUE : '&#xF7;'
     }
 )

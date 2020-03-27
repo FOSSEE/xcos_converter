@@ -94,10 +94,9 @@ for i, path in enumerate(conf.path):
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUB_ATTRIB:                #delete subattrib 'y' from mxGeometry
             a = './/'+ path[conf.KEY_PATH_SUBTAG]
             n = node.find(a)
-            if rl[conf.KEY_RULE_ATTR] in n.attrib and rl[conf.KEY_RULE_ATTR1] in n.attrib:
+            if rl[conf.KEY_RULE_ATTR] in n.attrib :
                 del n.attrib[rl[conf.KEY_RULE_ATTR]]
-            #if rl[conf.KEY_RULE_ATTR1] in n.attrib:                         #delete subattrib x if value is 300
-                #if float(str(n.attrib[rl[conf.KEY_RULE_ATTR1]])) == float(rl[conf.KEY_RULE_VALUE]) :
+            if rl[conf.KEY_RULE_ATTR1] in n.attrib :
                 del n.attrib[rl[conf.KEY_RULE_ATTR1]]
 
 
@@ -108,16 +107,12 @@ for i, path in enumerate(conf.path):
 
 
         elif rl[conf.KEY_RULE_OP] == conf.ADD_ATTRIB:
-            for k, v in rl[conf.KEY_RULE_ATTRIBUTE].items():                #add attrib initialport
-                node.set(k,v)
-            if rl[conf.KEY_RULE_ATTR] not in node.attrib:                   # if attrib 'datalines' is not present add
-                node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
-
-
-        elif rl[conf.KEY_RULE_OP] == conf.DELETE_PORT_ATTRIB:
-            if rl[conf.KEY_RULE_VALUE] == node.attrib[rl[conf.KEY_RULE_ATTR]]:            
-                del node.attrib[rl[conf.KEY_RULE_ATTR]]
-                del node.attrib[rl[conf.KEY_RULE_ATTR1]]
+            if conf.KEY_RULE_ATTRIBUTE in rl:
+                for k, v in rl[conf.KEY_RULE_ATTRIBUTE].items():                #add attrib initialport
+                    node.set(k,v)
+            if conf.KEY_RULE_ATTR in rl:
+                if rl[conf.KEY_RULE_ATTR] not in node.attrib:                   # if attrib 'datalines' is not present add
+                    node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
 
         elif rl[conf.KEY_RULE_OP] == conf.ADD_LINK_ATTRIB:
@@ -134,21 +129,12 @@ for i, path in enumerate(conf.path):
             node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
 
-        elif rl[conf.KEY_RULE_OP] == conf.REPLACE_ATTRIB_COMMANDPORT:
-            del node.attrib[path[conf.KEY_PATH_ATTR]]
-            x = './/' + rl[conf.KEY_RULE_SUBTAG]
-            n = node.find(x)
-            node.remove(n)
-            if len(node.getchildren()) == 0:
-                node.text=None
-            node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
+        elif rl[conf.KEY_RULE_OP] == conf.BLOCK_TYPE_C :
+            if rl[conf.KEY_RULE_ATTR] not in node.attrib:
+                node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
+            
 
-        elif rl[conf.KEY_RULE_OP] == conf.DELETE_ATTRIB_COMMANDCONTROL:
-            x = './/' + rl[conf.KEY_PATH_SUBTAG] + '/' + rl[conf.KEY_PATH_SUBSUBTAG]        
-            n = node.find(x)
-            if rl[conf.KEY_RULE_VALUE] in n.attrib :
-                del n.attrib[rl[conf.KEY_RULE_VALUE]]
 
 
 
