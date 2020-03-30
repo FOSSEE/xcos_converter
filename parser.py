@@ -23,7 +23,7 @@ for i, path in enumerate(conf.path):
     #print(xpath)
     nodes = root.findall(xpath)
     rl = conf.rule[i]
-    #print(i, rl , nodes)
+    #print(i,nodes)
     for node in nodes:
         
         #print(node.tag) 
@@ -77,18 +77,24 @@ for i, path in enumerate(conf.path):
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DOUBLE_TO_INTEGER_AND_SWAP:
+            
             if int(node.attrib['height']) > 0:
-                node.tag = rl[conf.KEY_RULE_TAG]            #change tag
                 node.attrib['height'],node.attrib['width'] = node.attrib['width'],node.attrib['height']     #exchange height & width
-                x = './/'+ path[conf.KEY_PATH_SUBTAG] + '[@' + path[conf.KEY_PATH_SUBATTR] +']'         #xpath for data
-                m = node.findall(x)
-                for n in m:
-                    n.attrib[rl[conf.KEY_RULE_ATTR]] =  str(int(float(n.attrib[path[conf.KEY_PATH_SUBATTR]])))          #change to value
-                    del n.attrib[path[conf.KEY_PATH_SUBATTR]]
+                for n in node:
                     n.attrib['column'],n.attrib['line'] = n.attrib['line'],n.attrib['column']   #exchange line & column
 
-                for n ,v in rl[conf.KEY_RULE_ATTRIBUTE].items():
-                    node.set(n,v)
+
+                if 'subattr' in path:
+                    x = './/'+ path[conf.KEY_PATH_SUBTAG] + '[@' + path[conf.KEY_PATH_SUBATTR] +']'         #xpath for data
+                    m = node.findall(x)
+                    for n in m:
+                        node.tag = rl[conf.KEY_RULE_TAG]            #change tag
+                        n.attrib[rl[conf.KEY_RULE_ATTR]] =  str(int(float(n.attrib[path[conf.KEY_PATH_SUBATTR]])))          #change to value
+                        del n.attrib[path[conf.KEY_PATH_SUBATTR]]
+                    
+
+                    for n ,v in rl[conf.KEY_RULE_ATTRIBUTE].items():
+                        node.set(n,v)
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUB_ATTRIB:                #delete subattrib 'y' from mxGeometry
@@ -133,6 +139,11 @@ for i, path in enumerate(conf.path):
             if rl[conf.KEY_RULE_ATTR] not in node.attrib:
                 node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
+
+        elif rl[conf.KEY_RULE_OP] == conf.BLOCK_TYPE_H:
+            if 'tag' in rl:
+                a = SubElement(node,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
+                a.tail = '\n      '
             
 
 

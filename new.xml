@@ -2614,14 +2614,14 @@
         <ScilabInteger as="nmode" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="0" />
         </ScilabInteger>
-        <ScilabDouble as="dState" height="7" width="1">
+        <ScilabDouble as="dState" height="1" width="7">
           <data column="0" line="0" realPart="-1.0" />
-          <data column="0" line="1" realPart="0.0" />
-          <data column="0" line="2" realPart="0.0" />
-          <data column="0" line="3" realPart="1.0" />
-          <data column="0" line="4" realPart="1.0" />
-          <data column="0" line="5" realPart="0.0" />
-          <data column="0" line="6" realPart="0.0" />
+          <data column="1" line="0" realPart="0.0" />
+          <data column="2" line="0" realPart="0.0" />
+          <data column="3" line="0" realPart="1.0" />
+          <data column="4" line="0" realPart="1.0" />
+          <data column="5" line="0" realPart="0.0" />
+          <data column="6" line="0" realPart="0.0" />
         </ScilabDouble>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />
@@ -3354,6 +3354,8 @@
         <mxGeometry as="geometry" height="40.0" width="40.0" x="500.0" y="1250.0" />
       <ScilabDouble as="state" height="0" width="0" />
       <ScilabDouble as="dState" height="0" width="0" />
+      <ScilabDouble as="realParameters" height="0" width="0" />
+      <Array as="objectsParameters" scilabClass="ScilabList1" />
       </BasicBlock>
       <CommandPort id="-4b9f829c:15ec1dacbf8:-7e7c" initialState="-1.0" ordering="1" parent="-4b9f829c:15ec1dacbf8:-7e7d" style="CommandPort;align=center;verticalAlign=bottom;spacing=10.0;rotation=90;flip=false;mirror=false" value="" />
       <CommandControlLink id="-4b9f829c:15ec1dacbf8:-7e75" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7e7c" style="CommandControlLink" target="-4b9f829c:15ec1dacbf8:-7e82" value="">
@@ -4348,14 +4350,14 @@
         <ScilabInteger as="nmode" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="0" />
         </ScilabInteger>
-        <ScilabDouble as="dState" height="7" width="1">
+        <ScilabDouble as="dState" height="1" width="7">
           <data column="0" line="0" realPart="-1.0" />
-          <data column="0" line="1" realPart="0.0" />
-          <data column="0" line="2" realPart="0.0" />
-          <data column="0" line="3" realPart="1.0" />
-          <data column="0" line="4" realPart="1.0" />
-          <data column="0" line="5" realPart="0.0" />
-          <data column="0" line="6" realPart="0.0" />
+          <data column="1" line="0" realPart="0.0" />
+          <data column="2" line="0" realPart="0.0" />
+          <data column="3" line="0" realPart="1.0" />
+          <data column="4" line="0" realPart="1.0" />
+          <data column="5" line="0" realPart="0.0" />
+          <data column="6" line="0" realPart="0.0" />
         </ScilabDouble>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />
@@ -5088,6 +5090,8 @@
         <mxGeometry as="geometry" height="40.0" width="40.0" x="530.0" y="1640.0" />
       <ScilabDouble as="state" height="0" width="0" />
       <ScilabDouble as="dState" height="0" width="0" />
+      <ScilabDouble as="realParameters" height="0" width="0" />
+      <Array as="objectsParameters" scilabClass="ScilabList1" />
       </BasicBlock>
       <CommandPort id="-4b9f829c:15ec1dacbf8:-7d3a" initialState="-1.0" ordering="1" parent="-4b9f829c:15ec1dacbf8:-7d3b" style="CommandPort;align=center;verticalAlign=bottom;spacing=10.0;rotation=90;flip=false;mirror=false" value="" />
       <ExplicitLink id="-4b9f829c:15ec1dacbf8:-7d39" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7d77" style="ExplicitLink" target="-4b9f829c:15ec1dacbf8:-7d36" value="">
@@ -5146,14 +5150,14 @@
         <ScilabInteger as="nmode" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="0" />
         </ScilabInteger>
-        <ScilabDouble as="dState" height="7" width="1">
+        <ScilabDouble as="dState" height="1" width="7">
           <data column="0" line="0" realPart="-1.0" />
-          <data column="0" line="1" realPart="0.0" />
-          <data column="0" line="2" realPart="0.0" />
-          <data column="0" line="3" realPart="1.0" />
-          <data column="0" line="4" realPart="1.0" />
-          <data column="0" line="5" realPart="0.0" />
-          <data column="0" line="6" realPart="0.0" />
+          <data column="1" line="0" realPart="0.0" />
+          <data column="2" line="0" realPart="0.0" />
+          <data column="3" line="0" realPart="1.0" />
+          <data column="4" line="0" realPart="1.0" />
+          <data column="5" line="0" realPart="0.0" />
+          <data column="6" line="0" realPart="0.0" />
         </ScilabDouble>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />
@@ -5886,6 +5890,8 @@
         <mxGeometry as="geometry" height="40.0" width="40.0" x="280.0" y="1780.0" />
       <ScilabDouble as="state" height="0" width="0" />
       <ScilabDouble as="dState" height="0" width="0" />
+      <ScilabDouble as="realParameters" height="0" width="0" />
+      <Array as="objectsParameters" scilabClass="ScilabList1" />
       </BasicBlock>
       <CommandPort id="-4b9f829c:15ec1dacbf8:-7d29" initialState="-1.0" ordering="1" parent="-4b9f829c:15ec1dacbf8:-7d2a" style="CommandPort;align=center;verticalAlign=bottom;spacing=10.0;rotation=90;flip=false;mirror=false" value="" />
       <CommandControlLink id="-4b9f829c:15ec1dacbf8:-7d26" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7d29" style="CommandControlLink" target="-4b9f829c:15ec1dacbf8:-7d2b" value="">
@@ -6145,14 +6151,14 @@
         <ScilabInteger as="nmode" height="1" intPrecision="sci_int32" width="1">
           <data column="0" line="0" value="0" />
         </ScilabInteger>
-        <ScilabDouble as="dState" height="7" width="1">
+        <ScilabDouble as="dState" height="1" width="7">
           <data column="0" line="0" realPart="-1.0" />
-          <data column="0" line="1" realPart="0.0" />
-          <data column="0" line="2" realPart="0.0" />
-          <data column="0" line="3" realPart="1.0" />
-          <data column="0" line="4" realPart="1.0" />
-          <data column="0" line="5" realPart="0.0" />
-          <data column="0" line="6" realPart="0.0" />
+          <data column="1" line="0" realPart="0.0" />
+          <data column="2" line="0" realPart="0.0" />
+          <data column="3" line="0" realPart="1.0" />
+          <data column="4" line="0" realPart="1.0" />
+          <data column="5" line="0" realPart="0.0" />
+          <data column="6" line="0" realPart="0.0" />
         </ScilabDouble>
         <Array as="oDState" scilabClass="ScilabList" />
         <Array as="equations" scilabClass="ScilabList" />
@@ -6885,6 +6891,8 @@
         <mxGeometry as="geometry" height="40.0" width="40.0" x="330.0" y="1970.0" />
       <ScilabDouble as="state" height="0" width="0" />
       <ScilabDouble as="dState" height="0" width="0" />
+      <ScilabDouble as="realParameters" height="0" width="0" />
+      <Array as="objectsParameters" scilabClass="ScilabList1" />
       </BasicBlock>
       <CommandPort id="-4b9f829c:15ec1dacbf8:-7ccc" initialState="-1.0" ordering="1" parent="-4b9f829c:15ec1dacbf8:-7ccd" style="CommandPort;align=center;verticalAlign=bottom;spacing=10.0;rotation=90;flip=false;mirror=false" value="" />
       <CommandControlLink id="-4b9f829c:15ec1dacbf8:-7cc5" parent="-50eacccf:15ebdcd7dc9:-76ee" source="-4b9f829c:15ec1dacbf8:-7ccc" style="CommandControlLink" target="-4b9f829c:15ec1dacbf8:-7c40" value="">

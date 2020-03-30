@@ -11,6 +11,7 @@ ADD_LINK_ATTRIB = 10
 DELETE_TAG = 11
 REPLACE_ATTRIB = 12
 BLOCK_TYPE_C = 13
+BLOCK_TYPE_H = 14
 KEY_RULE_OP = 'op'
 KEY_RULE_TAG = 'tag'
 KEY_RULE_ATTRIBUTE = 'attribute'
@@ -399,6 +400,7 @@ rule.append(
     }
 )
 
+
 path.append(
     {
         KEY_PATH_TAG : 'ScilabDouble',
@@ -413,6 +415,19 @@ rule.append({
     KEY_RULE_ATTRIBUTE:{'intPrecision':'sci_int32'},
     KEY_RULE_ATTR:'value'
 })
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'ScilabDouble',
+        KEY_PATH_ATTR : 'as',
+        KEY_PATH_ATTRVALUE : 'dState',
+    })
+rule.append({
+    KEY_RULE_OP:DOUBLE_TO_INTEGER_AND_SWAP,
+})
+
+
 
 path.append(
     {
@@ -589,5 +604,39 @@ rule.append(
         KEY_RULE_OP : REPLACE_ATTRIB,
         KEY_RULE_ATTR : 'value',
         KEY_RULE_VALUE : '&#xF7;'
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'BasicBlock',
+        KEY_PATH_ATTR : 'blockType',
+        KEY_PATH_ATTRVALUE : 'h'
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : BLOCK_TYPE_H,
+        KEY_RULE_TAG : 'ScilabDouble' ,
+        KEY_RULE_ATTR : {'as' : "realParameters" , 'height' : "0" , 'width' : "0"}
+        
+    }
+)
+
+
+path.append(
+    {
+        KEY_PATH_TAG : 'BasicBlock',
+        KEY_PATH_ATTR : 'blockType',
+        KEY_PATH_ATTRVALUE : 'h'
+    }
+)
+rule.append(
+    {
+        KEY_RULE_OP : BLOCK_TYPE_H,
+        KEY_RULE_TAG : 'Array' ,
+        KEY_RULE_ATTR : { 'as' : "objectsParameters" , 'scilabClass' : "ScilabList"}
+        
     }
 )
