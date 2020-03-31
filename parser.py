@@ -23,7 +23,7 @@ for i, path in enumerate(conf.path):
     #print(xpath)
     nodes = root.findall(xpath)
     rl = conf.rule[i]
-    #print(i,nodes)
+    #print(i, rl , nodes)
     for node in nodes:
         
         #print(node.tag) 
@@ -77,24 +77,18 @@ for i, path in enumerate(conf.path):
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DOUBLE_TO_INTEGER_AND_SWAP:
-            
             if int(node.attrib['height']) > 0:
+                node.tag = rl[conf.KEY_RULE_TAG]            #change tag
                 node.attrib['height'],node.attrib['width'] = node.attrib['width'],node.attrib['height']     #exchange height & width
-                for n in node:
+                x = './/'+ path[conf.KEY_PATH_SUBTAG] + '[@' + path[conf.KEY_PATH_SUBATTR] +']'         #xpath for data
+                m = node.findall(x)
+                for n in m:
+                    n.attrib[rl[conf.KEY_RULE_ATTR]] =  str(int(float(n.attrib[path[conf.KEY_PATH_SUBATTR]])))          #change to value
+                    del n.attrib[path[conf.KEY_PATH_SUBATTR]]
                     n.attrib['column'],n.attrib['line'] = n.attrib['line'],n.attrib['column']   #exchange line & column
 
-
-                if 'subattr' in path:
-                    x = './/'+ path[conf.KEY_PATH_SUBTAG] + '[@' + path[conf.KEY_PATH_SUBATTR] +']'         #xpath for data
-                    m = node.findall(x)
-                    for n in m:
-                        node.tag = rl[conf.KEY_RULE_TAG]            #change tag
-                        n.attrib[rl[conf.KEY_RULE_ATTR]] =  str(int(float(n.attrib[path[conf.KEY_PATH_SUBATTR]])))          #change to value
-                        del n.attrib[path[conf.KEY_PATH_SUBATTR]]
-                    
-
-                    for n ,v in rl[conf.KEY_RULE_ATTRIBUTE].items():
-                        node.set(n,v)
+                for n ,v in rl[conf.KEY_RULE_ATTRIBUTE].items():
+                    node.set(n,v)
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUB_ATTRIB:                #delete subattrib 'y' from mxGeometry
@@ -118,7 +112,7 @@ for i, path in enumerate(conf.path):
                     node.set(k,v)
             if conf.KEY_RULE_ATTR in rl:
                 if rl[conf.KEY_RULE_ATTR] not in node.attrib:                   # if attrib 'datalines' is not present add
-                    node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
+                    node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])            
 
 
         elif rl[conf.KEY_RULE_OP] == conf.ADD_LINK_ATTRIB:
@@ -134,20 +128,22 @@ for i, path in enumerate(conf.path):
             del node.attrib[path[conf.KEY_PATH_ATTR]]
             node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
-
-        elif rl[conf.KEY_RULE_OP] == conf.BLOCK_TYPE_C :
+        elif rl[conf.KEY_RULE_OP] == conf.BLOCK_TYPE_C:
             if rl[conf.KEY_RULE_ATTR] not in node.attrib:
                 node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
+        elif rl[conf.KEY_RULE_OP] == conf.ADD_TAG:
+            #if rl[conf.KEY_PATH_ATTR] in path:
+                #if rl[conf.KEY_PATH_ATTRVALUE] in path:
+                    #if rl[conf.KEY_RULE_ATTR] not in node.attrib: 
+            a = SubElement(node,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
+            a.tail = "\n        "
+                        
 
         elif rl[conf.KEY_RULE_OP] == conf.BLOCK_TYPE_H:
             if 'tag' in rl:
                 a = SubElement(node,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
-                a.tail = '\n      '
-            
-
-
-
+                a.tail = "\n        "
 
 for n,v in conf.root.items():
     root.set(n,v)
@@ -157,5 +153,18 @@ comment = Comment("Xcos - 2.0 - scilab-6.0.2 - 20190911")
 comment.tail = "\n      "  
 root.insert(0,comment)
 tree.write('new.xml', encoding='UTF-8', xml_declaration=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Author - Eric Paul
