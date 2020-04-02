@@ -133,17 +133,32 @@ for i, path in enumerate(conf.path):
                 node.set(rl[conf.KEY_RULE_ATTR],rl[conf.KEY_RULE_VALUE])
 
         elif rl[conf.KEY_RULE_OP] == conf.ADD_TAG:
-            #if rl[conf.KEY_PATH_ATTR] in path:
-                #if rl[conf.KEY_PATH_ATTRVALUE] in path:
-                    #if rl[conf.KEY_RULE_ATTR] not in node.attrib: 
             a = SubElement(node,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
-            a.tail = "\n        "
+            a.text = '\n      '
+            a.text = None
+            a.tail = '\n      '
+                        
+
+        elif rl[conf.KEY_RULE_OP] == conf.ADD_SUBTAG:
+            a = SubElement(node,rl[conf.KEY_RULE_SUBTAG],rl[conf.KEY_RULE_ATTR])
+            a.text = "\n      "
+            a.tail = "\n      "
                         
 
         elif rl[conf.KEY_RULE_OP] == conf.BLOCK_TYPE_H:
-            if 'tag' in rl:
+
+            if 'subtag' in rl:
+                xp = node.find('.//'+ rl[conf.KEY_RULE_SUBTAG] )
+                if 'subattrvalue' in rl:
+                    xp = node.find('.//'+ rl[conf.KEY_RULE_SUBTAG] + '[@' + rl[conf.KEY_RULE_SUBATTR] + '=\'' + rl[conf.KEY_RULE_SUBATTRVALUE] +'\']' )
+                print(xp)
+                a = SubElement(xp,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
+                a.tail = '\n      '
+                
+            elif 'tag' in rl:
                 a = SubElement(node,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
-                a.tail = "\n        "
+                a.tail = '\n      '
+
 
 for n,v in conf.root.items():
     root.set(n,v)
@@ -153,18 +168,5 @@ comment = Comment("Xcos - 2.0 - scilab-6.0.2 - 20190911")
 comment.tail = "\n      "  
 root.insert(0,comment)
 tree.write('new.xml', encoding='UTF-8', xml_declaration=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Author - Eric Paul
