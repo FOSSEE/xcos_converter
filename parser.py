@@ -59,12 +59,14 @@ for i, path in enumerate(conf.path):
             x = './/'+ path[conf.KEY_PATH_SUBTAG]
             n = node.find(x)                # finding mxgeometry
             xp = './/'+ path[conf.KEY_PATH_SUBTAG] +'['+ rl[conf.KEY_RULE_SUBSUBTAG]+']'
-            np= node.find(xp)               # finding mx point tag in mxgeometry
+            #print(xp)
+            np= node.find(xp)             # finding mx point tag in mxgeometry
+            #print(np)
             if np is None:
                 a = SubElement(n,rl[conf.KEY_RULE_SUBSUBTAG],rl[conf.KEY_RULE_ATTR])
-                a.tail = "\n        "
+                a.tail = "\n         "
                 b = SubElement(n,rl[conf.KEY_RULE_SUBSUBTAG1],rl[conf.KEY_RULE_ATTR1])
-                b.tail = "\n        "       
+                b.tail = "\n         "       
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUBTAG:            #removing mxgeometry tag
@@ -77,18 +79,24 @@ for i, path in enumerate(conf.path):
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DOUBLE_TO_INTEGER_AND_SWAP:
+            
             if int(node.attrib['height']) > 0:
-                node.tag = rl[conf.KEY_RULE_TAG]            #change tag
                 node.attrib['height'],node.attrib['width'] = node.attrib['width'],node.attrib['height']     #exchange height & width
-                x = './/'+ path[conf.KEY_PATH_SUBTAG] + '[@' + path[conf.KEY_PATH_SUBATTR] +']'         #xpath for data
-                m = node.findall(x)
-                for n in m:
-                    n.attrib[rl[conf.KEY_RULE_ATTR]] =  str(int(float(n.attrib[path[conf.KEY_PATH_SUBATTR]])))          #change to value
-                    del n.attrib[path[conf.KEY_PATH_SUBATTR]]
+                for n in node:
                     n.attrib['column'],n.attrib['line'] = n.attrib['line'],n.attrib['column']   #exchange line & column
 
-                for n ,v in rl[conf.KEY_RULE_ATTRIBUTE].items():
-                    node.set(n,v)
+
+                if 'subattr' in path:
+                    x = './/'+ path[conf.KEY_PATH_SUBTAG] + '[@' + path[conf.KEY_PATH_SUBATTR] +']'         #xpath for data
+                    m = node.findall(x)
+                    for n in m:
+                        node.tag = rl[conf.KEY_RULE_TAG]            #change tag
+                        n.attrib[rl[conf.KEY_RULE_ATTR]] =  str(int(float(n.attrib[path[conf.KEY_PATH_SUBATTR]])))          #change to value
+                        del n.attrib[path[conf.KEY_PATH_SUBATTR]]
+                    
+
+                    for n ,v in rl[conf.KEY_RULE_ATTRIBUTE].items():
+                        node.set(n,v)
 
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUB_ATTRIB:                #delete subattrib 'y' from mxGeometry
@@ -151,12 +159,13 @@ for i, path in enumerate(conf.path):
                 xp = node.find('.//'+ rl[conf.KEY_RULE_SUBTAG] )
                 if 'subattrvalue' in rl:
                     xp = node.find('.//'+ rl[conf.KEY_RULE_SUBTAG] + '[@' + rl[conf.KEY_RULE_SUBATTR] + '=\'' + rl[conf.KEY_RULE_SUBATTRVALUE] +'\']' )
-                print(xp)
-                a = SubElement(xp,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
-                a.tail = '\n      '
+                a = SubElement(xp,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR]) 
+                a.tail = "\n      "
                 
             elif 'tag' in rl:
                 a = SubElement(node,rl[conf.KEY_RULE_TAG],rl[conf.KEY_RULE_ATTR])
+                a.text = '\n      '
+                a.text = None
                 a.tail = '\n      '
 
 
