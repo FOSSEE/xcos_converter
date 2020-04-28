@@ -1,5 +1,4 @@
 BLOCK_TYPE_H = 1
-ADD_TAG = 2
 KEY_RULE_OP = 'op'
 KEY_RULE_TAG = 'tag'
 KEY_RULE_ATTRIBUTE = 'attribute'
@@ -760,45 +759,6 @@ rule.append({
     KEY_RULE_OP: BLOCK_TYPE_H,
     KEY_RULE_TAG: 'Array',
     KEY_RULE_ATTR: {'as': "equations", 'scilabClass': "ScilabList"},
-})
-
-path.append(
-    {
-        KEY_PATH_TAG: 'SplitBlock',
-        KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
-    }
-)
-rule.append({
-    KEY_RULE_OP: ADD_TAG,
-    KEY_RULE_TAG: 'mxGeometry',
-    KEY_RULE_ATTR: {'as': "geometry", 'x': "0.0", 'y': "0.0", 'width': "7.0", 'height': "7.0"},
-})
-
-path.append(
-    {
-        KEY_PATH_TAG: 'SplitBlock',
-        KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
-    }
-)
-rule.append({
-    KEY_RULE_OP: ADD_TAG,
-    KEY_RULE_TAG: 'ScilabInteger',
-    KEY_RULE_ATTR: {'as': "nbZerosCrossing", 'height': "1", 'width': "1", 'intPrecision': "sci_int32"},
-})
-
-path.append(
-    {
-        KEY_PATH_TAG: 'SplitBlock',
-        KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
-    }
-)
-rule.append({
-    KEY_RULE_OP: ADD_TAG,
-    KEY_RULE_TAG: 'ScilabInteger',
-    KEY_RULE_ATTR: {'as': "nmode", 'height': "1", 'width': "1", 'intPrecision': "sci_int32"},
 })
 
 path.append(

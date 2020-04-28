@@ -19,7 +19,7 @@ for i, path in enumerate(conf.path):
     # print(xpath)
     nodes = root.findall(xpath)
     rl = conf.rule[i]
-    # print(i, rl , nodes)
+    # print(nodes)
     for node in nodes:
         if rl[conf.KEY_RULE_OP] == conf.DOUBLE_TO_INTEGER:
             node.tag = rl[conf.KEY_RULE_TAG]
@@ -52,13 +52,14 @@ for i, path in enumerate(conf.path):
             if np is None:
                 a = SubElement(n, rl[conf.KEY_RULE_SUBSUBTAG], rl[conf.KEY_RULE_ATTR])
                 a.tail = "\n        "
-                b = SubElement(n, rl[conf.KEY_RULE_SUBSUBTAG1], rl[conf.KEY_RULE_ATTR1])
-                b.tail = "\n        "
+                if conf.KEY_RULE_SUBSUBTAG1 in rl:
+                    b = SubElement(n, rl[conf.KEY_RULE_SUBSUBTAG1], rl[conf.KEY_RULE_ATTR1])
+                    b.tail = "\n        "
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUBTAG:            # removing mxgeometry tag
-            if conf.KEY_PATH_SUBTAG in path:
-                x = './/' + path[conf.KEY_PATH_SUBTAG]
-                n = node.find(x)
+            x = './/' + rl[conf.KEY_RULE_TAG]
+            n = node.find(x)
+            if n is not None:
                 node.remove(n)
             if len(node) == 0:
                 node.text = None
@@ -108,26 +109,27 @@ for i, path in enumerate(conf.path):
                 node.set(n, v)
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_TAG:
-            root.remove(node)
+            xp = node.find('.//' + rl[conf.KEY_RULE_TAG] + '[@' + rl[conf.KEY_RULE_ATTR] + ']')
+            # for n in xp:
+            node.remove(xp)
 
         elif rl[conf.KEY_RULE_OP] == conf.REPLACE_ATTRIB:
             del node.attrib[path[conf.KEY_PATH_ATTR]]
             node.set(rl[conf.KEY_RULE_ATTR], rl[conf.KEY_RULE_VALUE])
 
         elif rl[conf.KEY_RULE_OP] == conf.ADD_TAG:
-            a = SubElement(node, rl[conf.KEY_RULE_TAG], rl[conf.KEY_RULE_ATTR])
-            a.text = '\n      '
-            a.text = None
-            a.tail = '\n      '
+            if conf.KEY_RULE_ATTR in rl:
+                xp = node.find('.//' + rl[conf.KEY_RULE_TAG] + '[@' + rl[conf.KEY_RULE_ATTR] + '=\'' + rl[conf.KEY_RULE_ATTRVALUE] + '\']')
+            if xp not in node:
+                a = SubElement(node, rl[conf.KEY_RULE_TAG], rl[conf.KEY_RULE_ATTRIBUTE])
+                a.tail = '\n      '
 
         elif rl[conf.KEY_RULE_OP] == confsb.BLOCK_TYPE_H:
 
             if conf.KEY_RULE_SUBTAG in rl:
                 xp = node.find('.//' + rl[conf.KEY_RULE_SUBTAG])
-                xp.text = '\n      '
                 if conf.KEY_RULE_SUBATTRVALUE in rl:
                     xp = node.find('.//' + rl[conf.KEY_RULE_SUBTAG] + '[@' + rl[conf.KEY_RULE_SUBATTR] + '=\'' + rl[conf.KEY_RULE_SUBATTRVALUE] + '\']')
-                xp.text = '\n        '
                 a = SubElement(xp, rl[conf.KEY_RULE_TAG], rl[conf.KEY_RULE_ATTR])
                 a.tail = '\n      '
 
