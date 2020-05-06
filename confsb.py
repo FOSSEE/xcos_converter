@@ -18,6 +18,10 @@ KEY_PATH_ATTRVALUE = 'attrvalue'
 KEY_PATH_SUBTAG = 'subtag'
 KEY_PATH_SUBATTR = 'subattr'
 KEY_PATH_SUBSUBTAG = 'subsubtag'
+KEY_PATH_MISSING_ATTR = 'missing_attr'
+KEY_PATH_MISSING_SUBTAG = 'missing_subtag'
+KEY_PATH_MISSING_SUBATTR = 'missing_subattr'
+KEY_PATH_MISSING_SUBATTRVALUE = 'missing_subattrvalue'
 
 path = []
 rule = []
@@ -29,7 +33,8 @@ path.append(
     {
         KEY_PATH_TAG: 'BasicBlock',
         KEY_PATH_ATTR: 'blockType',
-        KEY_PATH_ATTRVALUE: 'h'
+        KEY_PATH_ATTRVALUE: 'h',
+        KEY_PATH_MISSING_SUBTAG: 'SuperBlockDiagram'
     }
 )
 rule.append({
@@ -42,7 +47,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SuperBlockDiagram',
         KEY_PATH_ATTR: 'as',
-        KEY_PATH_ATTRVALUE: 'child'
+        KEY_PATH_ATTRVALUE: 'child',
+        KEY_PATH_MISSING_SUBTAG: 'Array'
     }
 )
 rule.append({
@@ -56,7 +62,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SuperBlockDiagram',
         KEY_PATH_ATTR: 'as',
-        KEY_PATH_ATTRVALUE: 'child'
+        KEY_PATH_ATTRVALUE: 'child',
+        KEY_PATH_MISSING_SUBTAG: 'Array'
     }
 )
 rule.append({
@@ -73,7 +80,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SuperBlockDiagram',
         KEY_PATH_ATTR: 'as',
-        KEY_PATH_ATTRVALUE: 'child'
+        KEY_PATH_ATTRVALUE: 'child',
+        KEY_PATH_MISSING_SUBTAG: 'mxGraphModel'
     }
 )
 rule.append({
@@ -87,7 +95,8 @@ path.append(
     {
         KEY_PATH_TAG: 'BasicBlock',
         KEY_PATH_ATTR: 'blockType',
-        KEY_PATH_ATTRVALUE: 'h'
+        KEY_PATH_ATTRVALUE: 'h',
+        KEY_PATH_MISSING_SUBTAG: 'root'
     }
 )
 rule.append({
@@ -103,6 +112,7 @@ path.append(
         KEY_PATH_TAG: 'BasicBlock',
         KEY_PATH_ATTR: 'blockType',
         KEY_PATH_ATTRVALUE: 'h',
+        KEY_PATH_MISSING_SUBTAG: 'mxCell'
     }
 )
 rule.append({
@@ -661,7 +671,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'ScilabDouble'
     }
 )
 rule.append({
@@ -674,7 +685,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'ScilabDouble'
     }
 )
 rule.append({
@@ -687,7 +699,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'ScilabDouble'
     }
 )
 rule.append({
@@ -700,7 +713,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'Array'
     }
 )
 rule.append({
@@ -713,7 +727,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'ScilabDouble'
     }
 )
 rule.append({
@@ -726,7 +741,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'ScilabDouble'
     }
 )
 rule.append({
@@ -739,7 +755,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'Array'
     }
 )
 rule.append({
@@ -752,7 +769,8 @@ path.append(
     {
         KEY_PATH_TAG: 'SplitBlock',
         KEY_PATH_ATTR: 'style',
-        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f'
+        KEY_PATH_ATTRVALUE: 'CLKSPLIT_f',
+        KEY_PATH_MISSING_SUBTAG: 'Array'
     }
 )
 rule.append({

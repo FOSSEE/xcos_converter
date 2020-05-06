@@ -58,6 +58,8 @@ for i, path in enumerate(conf.path):
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_SUBTAG:            # removing mxgeometry tag
             x = './/' + rl[conf.KEY_RULE_TAG]
+            if conf.KEY_RULE_ATTR in rl:
+                x = './/' + rl[conf.KEY_RULE_TAG] + '[@' + rl[conf.KEY_RULE_ATTR] + ']'
             n = node.find(x)
             if n is not None:
                 node.remove(n)
@@ -109,9 +111,9 @@ for i, path in enumerate(conf.path):
                 node.set(n, v)
 
         elif rl[conf.KEY_RULE_OP] == conf.DELETE_TAG:
-            xp = node.find('.//' + rl[conf.KEY_RULE_TAG] + '[@' + rl[conf.KEY_RULE_ATTR] + ']')
-            # for n in xp:
-            node.remove(xp)
+            x = node.find('.//' + rl[conf.KEY_RULE_TAG] + '[@' + rl[conf.KEY_RULE_ATTR] + ']')
+            node.remove(x)
+            
 
         elif rl[conf.KEY_RULE_OP] == conf.REPLACE_ATTRIB:
             del node.attrib[path[conf.KEY_PATH_ATTR]]
