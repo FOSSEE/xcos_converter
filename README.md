@@ -9,20 +9,21 @@ The relationship between Xcos and Xml is that Xcos is written in the same format
 The files used in this project are:
 
 1. Parser.py:
+
 The parser file uses conf.py to get the xpath and the rule.The first part of the code deals with xpath. Xpaths are needed to find the exact nodes we have to work with , it guarantees that no other nodes which might have similar tag names are affected. 
 Inorder to build the xpath , it refers to the variable path in the conf file. Once the xpath is built it goes through the rule variable in the conf file to find out which operation has to be applied to the node found using xpath.
-
 
 2. Conf.py
 
 In this file we have globally defined all variables. All the operations that are to be performed are mentioned at the beginning of this file. 
-	This file contains two lists i.e. path and rule. 
+This file contains two lists i.e. path and rule. 
   
 Path :
-  Path has nodes like tag, attribute, subtag, sub attributes that are to be changed. It deals with Xpath in the parser.py   	file. This nodes are declared using pattern ‘KEY_PATH_*’.
-	Initially, path list is declared empty. Later on nodes get appended to this list according to the requirement of Xpath 			written in the parser.py file.
+  Path has nodes like tag, attribute, subtag, sub attributes that are to be changed. It deals with Xpath in the parser.py      	file. This nodes are declared using pattern ‘KEY_PATH_*’.
+ Initially, path list is declared empty. Later on nodes get appended to this list according to the requirement of Xpath              written in the parser.py file.
 
 Rule :
 	Rule has a list of nodes with changed values. This nodes are declared using pattern ‘KEY_RULE_*’. 
-	At first, this list is empty. When Xpath in the parser.py file gets the desired node, the operation related to it is 				performed. And the list gets appended with changed nodes. The operations are declared using the pattern ‘KEY_RULE_OP’.
+	At first, this list is empty. When Xpath in the parser.py file gets the desired node, the operation related to it is 	     performed. And the list gets appended with changed nodes. The operations are declared using the pattern
+        ‘KEY_RULE_OP’.
 
