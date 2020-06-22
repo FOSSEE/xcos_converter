@@ -10,8 +10,8 @@ There are two main files used in the project, parser.py & conf.py. Inorder to ru
 
 The technologies required for this project are :
 
-	- Ubuntu 16 & up
-	- Python 3.6
+	* Ubuntu 16 & up
+	* Python 3.6
 
 Python element tree doesnt need to be installed as it is already present in the python package, it only needs to be imported.
 
