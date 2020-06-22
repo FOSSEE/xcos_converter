@@ -4,7 +4,7 @@ The aim of this project is to provide a software which converts a Scilab 5.5.2 f
 
 ## Getting Started
 
-There are two main files used in the project, parser.py & conf.py. Inorder to run the project run the parser.py. The other files present are the input xcos files for the project
+There are two main files used in the project, parser.py & conf.py. Inorder to run the project run the parser.py. The other files present are **the input xcos files for the project**
 
 ### Requirement
 
@@ -42,4 +42,4 @@ Note : Make sure the inputs given to parser are in the same folder. You can chec
 
 ## Note
 
-All the latest code have been pused to the Python branch , please refer that.
+All the latest code have been pushed to the **Python branch in the same repo** , please refer that.
